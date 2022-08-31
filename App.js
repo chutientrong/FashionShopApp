@@ -1,20 +1,52 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+import React from "react";
+
+import { useEffect, useCallback } from "react";
+import { View } from "react-native";
+import { Provider } from "react-redux";
+import { store, persistor } from "./src/redux/store";
+import { PersistGate } from "redux-persist/integration/react";
+import * as Font from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
+import { CUSTOMFONTS } from "./src/constants";
+
+import { RootStack } from "./src/navigation/RootStack";
+
+
+const App = () => {
+  const [fontsLoaded] = Font.useFonts(CUSTOMFONTS);
+
+  useEffect(() => {
+    async function prepare() {
+      await SplashScreen.preventAutoHideAsync();
+    }
+
+    prepare();
+  }, []);
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+         {/* <Splash></Splash> */}
+        {/* <AppNavigator></AppNavigator> */}
+        <RootStack></RootStack>
+          
+        </PersistGate>
+
+      </Provider>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;

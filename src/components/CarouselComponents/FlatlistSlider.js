@@ -21,7 +21,7 @@ export default class FlatListSlider extends Component {
     imageKey: 'image',
     local: false,
     width: Math.round(Dimensions.get('window').width),
-    height: 206,
+    height: 150,
     separatorWidth: 0,
     loop: true,
     indicator: true,
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
     resizeMode: 'stretch',
   },
   indicatorContainerStyle: {
-    marginTop: 16,
+    marginTop: 8,
   },
   shadow: {
     ...Platform.select({

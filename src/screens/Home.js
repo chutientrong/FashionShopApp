@@ -10,14 +10,15 @@ import Icon from "react-native-vector-icons/Ionicons";
 import { COLORS, FONTS } from "../constants";
 import CarouselFlashSale from "../components/CarouselFlashSale";
 import { discount, flashsale } from "../models/FlashSaleFake";
-import { fakedata } from "../models/fakedata";
 import TextButton from "../components/TextButton";
 import Category from "../components/Category";
 import { category } from "../models/CategoryData";
 import FlashSale from "../components/FlashSale";
+import MegaSale from "../components/MegaSale";
+import { productFSsale, productMGsale, productRecommend } from "../models/ProductSale";
+import Recommend from "../components/Recommend";
 
 const Home = ({ navigation }) => {
-  const theme = "dark";
   const dispatch = useDispatch();
   const nav = useNavigation();
   useLayoutEffect(() => {
@@ -70,7 +71,7 @@ const Home = ({ navigation }) => {
           style={{ flex: 1, height: 1, backgroundColor: COLORS.neutralLight }}
         />
         {/* CAROUSEL AND COUNT DOWN */}
-        <View style={{ margin: 16 }}>
+        <View style={{ marginLeft: 16,marginRight: 16, }}>
           <CarouselFlashSale data={flashsale}></CarouselFlashSale>
         </View>
 
@@ -140,7 +141,7 @@ const Home = ({ navigation }) => {
               onPress={() => console.log("flash sale")}
             />
           </View>
-          <FlashSale></FlashSale>
+          <FlashSale data={productFSsale}></FlashSale>
         </View>
 
         {/* MEGA SALE  */}
@@ -177,20 +178,22 @@ const Home = ({ navigation }) => {
               onPress={() => console.log("Mega sale")}
             />
           </View>
-          <FlashSale></FlashSale>
+          <MegaSale data={productMGsale}></MegaSale>
         </View>
 
         {/* RECOMMEND PRODUCT  */}
-
-        <View style={{ alignItems: "center", justifyContent: "center" }}>
-          <Button
-            style={{ fontSize: 20, color: "green" }}
-            onPress={handleLogout}
-            title="Press"
-          >
-            Press
-          </Button>
+        <View
+          style={{
+            // margin: 16,
+            marginTop: 8,
+            flexDirection: "column",
+            // alignItems:"center"
+            // height: 270,
+          }}
+        >
+          <Recommend data={productRecommend}></Recommend>
         </View>
+        
       </ScrollView>
     </View>
   );

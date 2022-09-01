@@ -14,6 +14,7 @@ const CarouselFlashSale = ({data}) => {
     <View
       style={{
         flex: 1,
+
       }}
     >
       <FlatListSlider

@@ -11,11 +11,12 @@ const CategoryCard = ({ image, title, onPress }) => {
         justifyContent: "space-between",
         flexDirection: "column",
         alignItems: "center",
-        marginLeft: 8,
+        marginRight: 8,
+
       }}
       onPress={onPress}
     >
-      <Image source={image} style={{ height: 70, width: 70 }}></Image>
+      <Image source={image} style={{ height: 70, width: 70, }}></Image>
       <Text
         style={{
           color: COLORS.grey,

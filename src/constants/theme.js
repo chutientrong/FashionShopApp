@@ -7,7 +7,7 @@ export const COLORS = {
   transparentPrimary: '#AAD8EE',
 
   orange: '#FFA133',
-  yellow: '#F1CD7C',
+  yellow: '#FF8C00',
   lightYellow: '#FFD88A',
   lightOrange: '#FFA133',
   lightOrange2: '#FDDED4',

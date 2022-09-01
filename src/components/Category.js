@@ -1,10 +1,9 @@
 import { View, Text, FlatList, ScrollView } from "react-native";
 import React from "react";
 import CategoryCard from "./CategoryComponents/CategoryCard";
-import { icons } from "../constants";
 
 const Category = ({ data }) => {
-//   console.log(data);
+  // console.log("category = ",data);
   return (
     <View style={{ marginTop: 12, height: 108 }}>
       <ScrollView

@@ -7,7 +7,7 @@ const CountDownBox = ({ time, componentStyle }) => {
   return (
     <View style={{ position: "absolute", marginLeft: 24, bottom: 45 }}>
       <CountDown
-        size={20}
+        size={15}
         until={time}
         // onFinish={() => alert("Finished")}
         digitStyle={{

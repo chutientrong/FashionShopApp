@@ -3,8 +3,8 @@ import React from 'react'
 import ProductCard from './ProductCard'
 import { COLORS } from '../constants';
 
-const FlashSale = ({ data }) => {
-  // console.log("Flash = ",data);
+const MegaSale = ({ data }) => {
+  console.log("Mega = ",data);
   return (
     <View style={{height:244,marginTop:12}}>
       <ScrollView
@@ -31,6 +31,6 @@ const FlashSale = ({ data }) => {
   )
 }
 
-export default FlashSale
+export default MegaSale
 
 const styles = StyleSheet.create({})

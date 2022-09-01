@@ -34,7 +34,11 @@ export const COLORS = {
   white: '#FFFFFF',
   black: '#3D3942',
   neutralLight:'#EBF0FF',
+  neutralDark:'#223263',
 
+  active: '#3498db',
+  inactive: '#bdc3c7',
+  
   transparent: 'transparent',
   transparentWhite1: 'rgba(255, 255, 255, 0.1)',
   transparentBlack1: 'rgba(0, 0, 0, 0.1)',
@@ -65,6 +69,7 @@ export const SIZES = {
   radius: 20,
   bodyerror:12,
   btnFont:14,
+  bodyNumber:16,
   // app dimensions
   width,
   height,
@@ -136,7 +141,13 @@ export const FONTS = {
     fontFamily: 'Poppins-Bold',
     fontSize: SIZES.btnFont,
     lineHeight: 25.2,
+  },
+  bodyNumber:{
+    fontFamily: 'Poppins-Bold',
+    fontSize: SIZES.bodyNumber,
+    lineHeight: 24,
   }
+
 };
 
 export const darkTheme = {

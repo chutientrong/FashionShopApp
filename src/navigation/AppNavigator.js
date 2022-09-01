@@ -5,7 +5,7 @@ import StackAuth from "./StackAuth";
 import Splash from "../screens/Splash";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MainStackNavigator from "./RootNavigation";
-import ShopNavigator from "./ShopNavigator";
+import TabNavigation from "./TabNavigation";
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
@@ -16,7 +16,7 @@ const AppNavigator = () => {
   // const isLogin = false;
   function renderScreens() {
     return isLogin ? (
-      <Stack.Screen name={"ShopStack"} component={ShopNavigator} />
+      <Stack.Screen name={"TabNav"} component={TabNavigation} />
     ) : (
       <Stack.Screen name={"StackAuth"} component={StackAuth} />
     );

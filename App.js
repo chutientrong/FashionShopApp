@@ -1,6 +1,4 @@
-
 import React from "react";
-
 import { useEffect, useCallback } from "react";
 import { View } from "react-native";
 import { Provider } from "react-redux";
@@ -9,9 +7,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import * as Font from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { CUSTOMFONTS } from "./src/constants";
-
 import { RootStack } from "./src/navigation/RootStack";
-
 
 const App = () => {
   const [fontsLoaded] = Font.useFonts(CUSTOMFONTS);
@@ -38,12 +34,8 @@ const App = () => {
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-         {/* <Splash></Splash> */}
-        {/* <AppNavigator></AppNavigator> */}
-        <RootStack></RootStack>
-          
+          <RootStack></RootStack>
         </PersistGate>
-
       </Provider>
     </View>
   );

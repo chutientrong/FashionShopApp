@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import CountDown from "react-native-countdown-component";
-import { COLORS, FONTS } from "../constants";
+import { COLORS, FONTS } from "../../constants";
 
 const CountDownBox = ({ time, componentStyle }) => {
   return (
@@ -15,7 +15,7 @@ const CountDownBox = ({ time, componentStyle }) => {
           borderWidth: 1,
           borderColor: COLORS.neutralLight,
         }}
-        digitTxtStyle={{ color: COLORS.neutralDark ,fontWeight:"700",fontFamily:FONTS.bodyNumber}}
+        digitTxtStyle={{ color: COLORS.neutralDark ,fontWeight:"700",...FONTS.bodyNumber}}
         timeLabelStyle={{ color: "red", fontWeight: "bold" }}
         separatorStyle={{
           color: COLORS.white,

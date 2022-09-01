@@ -7,10 +7,14 @@ import { logout } from "../redux/actions/authActions";
 import Header from "../components/Header";
 import SearchInput from "../components/SearchInput";
 import Icon from "react-native-vector-icons/Ionicons";
-import { COLORS } from "../constants";
+import { COLORS, FONTS } from "../constants";
 import CarouselFlashSale from "../components/CarouselFlashSale";
 import { discount, flashsale } from "../models/FlashSaleFake";
 import { fakedata } from "../models/fakedata";
+import TextButton from "../components/TextButton";
+import Category from "../components/Category";
+import { category } from "../models/CategoryData";
+import FlashSale from "../components/FlashSale";
 
 const Home = ({ navigation }) => {
   const theme = "dark";
@@ -59,21 +63,125 @@ const Home = ({ navigation }) => {
                 style={{ fontWeight: "700" }}
               ></Icon>
             </View>
-            
           }
         ></Header>
         {/* ADD LINE */}
-        <View style={{flex: 1, height: 1, backgroundColor: COLORS.neutralLight}} />
-        {/* <ScrollView
-        style={{}}
-        contentContainerStyle={{ paddingBottom: 100 }}
-      > */}
         <View
-        style={{margin:16}}>
-
+          style={{ flex: 1, height: 1, backgroundColor: COLORS.neutralLight }}
+        />
+        {/* CAROUSEL AND COUNT DOWN */}
+        <View style={{ margin: 16 }}>
           <CarouselFlashSale data={flashsale}></CarouselFlashSale>
         </View>
-        {/* </ScrollView> */}
+
+        {/* CATEGORY */}
+
+        <View style={{ margin: 16, flexDirection: "column", height: 140 }}>
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
+            <Text
+              style={{
+                color: COLORS.neutralDark,
+                fontWeight: "700",
+                ...FONTS.btnFont,
+              }}
+            >
+              Category
+            </Text>
+            <TextButton
+              label="More Category"
+              buttonContainerStyle={{
+                backgroundColor: null,
+              }}
+              labelStyle={{
+                color: COLORS.primaryBlue,
+                fontWeight: "700",
+                ...FONTS.btnFont,
+              }}
+              onPress={() => console.log("category")}
+            />
+          </View>
+          <Category data={category}></Category>
+        </View>
+
+        {/* FLASH SALE  */}
+
+        <View
+          style={{
+            margin: 16,
+            flexDirection: "column",
+            marginTop: 8,
+            height: 270,
+          }}
+        >
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
+            <Text
+              style={{
+                color: COLORS.neutralDark,
+                fontWeight: "700",
+                ...FONTS.btnFont,
+              }}
+            >
+              Flash Sale
+            </Text>
+            <TextButton
+              label="See More"
+              buttonContainerStyle={{
+                backgroundColor: null,
+              }}
+              labelStyle={{
+                color: COLORS.primaryBlue,
+                fontWeight: "700",
+                ...FONTS.btnFont,
+              }}
+              onPress={() => console.log("flash sale")}
+            />
+          </View>
+          <FlashSale></FlashSale>
+        </View>
+
+        {/* MEGA SALE  */}
+        <View
+          style={{
+            margin: 16,
+            marginTop: 8,
+            flexDirection: "column",
+            height: 270,
+          }}
+        >
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
+            <Text
+              style={{
+                color: COLORS.neutralDark,
+                fontWeight: "700",
+                ...FONTS.btnFont,
+              }}
+            >
+              Mega Sale
+            </Text>
+            <TextButton
+              label="See More"
+              buttonContainerStyle={{
+                backgroundColor: null,
+              }}
+              labelStyle={{
+                color: COLORS.primaryBlue,
+                fontWeight: "700",
+                ...FONTS.btnFont,
+              }}
+              onPress={() => console.log("Mega sale")}
+            />
+          </View>
+          <FlashSale></FlashSale>
+        </View>
+
+        {/* RECOMMEND PRODUCT  */}
+
         <View style={{ alignItems: "center", justifyContent: "center" }}>
           <Button
             style={{ fontSize: 20, color: "green" }}
@@ -83,9 +191,6 @@ const Home = ({ navigation }) => {
             Press
           </Button>
         </View>
-        {/* <Text>Home content area</Text> */}
-
-        {/* <View style={gStyle.spacer64} /> */}
       </ScrollView>
     </View>
   );

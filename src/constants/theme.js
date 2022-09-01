@@ -146,6 +146,12 @@ export const FONTS = {
     fontFamily: 'Poppins-Bold',
     fontSize: SIZES.bodyNumber,
     lineHeight: 24,
+  },
+  fontPopinBold:{
+    fontFamily:'Poppins-Bold'
+  },
+  fontPopinRegular:{
+    fontFamily:'Poppins-Regular'
   }
 
 };

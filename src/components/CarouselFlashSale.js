@@ -4,22 +4,16 @@ import { COLORS, WIDTH } from "../constants";
 import { useLinkProps } from "@react-navigation/native";
 import Carousel, { ICarouselInstance } from "react-native-reanimated-carousel";
 import FlatListSlider from "./CarouselComponents/FlatlistSlider";
-import CountDownBox from "./CountDownBox";
-// import ViewSlider from 'react-native-view-slider'
+import CountDownBox from "./CarouselComponents/CountDownBox";
 
 const CarouselFlashSale = ({data}) => {
   const [isVertical, setIsVertical] = useState(false);
-  // const ref = useRef();
-  console.log(data);
+  // console.log(data);
 
   return (
     <View
       style={{
         flex: 1,
-        // paddingTop: 10,
-        // alignItems: "center",
-        // justifyContent: "center",
-        
       }}
     >
       <FlatListSlider
@@ -31,7 +25,7 @@ const CarouselFlashSale = ({data}) => {
             separator={0}
             loop={true}
             autoscroll={true}
-            // onPress={item => alert(JSON.stringify(item))}
+            onPress={item => consol.log(JSON.stringify(item))}
             indicator
             animation
             

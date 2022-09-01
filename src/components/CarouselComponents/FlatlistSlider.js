@@ -182,7 +182,6 @@ export default class FlatListSlider extends Component {
 
 const styles = StyleSheet.create({
   image: {
-    borderRadius:5,
     height: 206,
     resizeMode: 'stretch',
   },

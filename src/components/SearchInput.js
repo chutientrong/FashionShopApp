@@ -18,7 +18,7 @@ const SearchInput = ({
           alignItems: "center",
           //   width: 343,
         //   marginLeft: 16,
-          width: WIDTH *0.75,
+          width: WIDTH *0.70,
           height: 46,
           borderRadius: 5,
           borderColor: COLORS.neutralLight,

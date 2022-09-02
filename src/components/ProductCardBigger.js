@@ -4,10 +4,9 @@ import StarRating from "./StarRating";
 
 const ProductCardBigger = ({ image, name, cost, preCost, discount,rating, onPress }) => {
     return (
-      <TouchableOpacity
+        <TouchableOpacity
         style={{
-            // flex:1,
-          width: (WIDTH-48)/2,
+          width: (WIDTH-32)/2-8,
           height: 282,
           justifyContent: "space-between",
           flexDirection: "column",
@@ -21,12 +20,13 @@ const ProductCardBigger = ({ image, name, cost, preCost, discount,rating, onPres
         }}
         onpress={onPress}
       >
-        <Image source={image} style={{ height: 110, width: 110,borderRadius:5 }}></Image>
-        <View style={{marginTop:8}}>
+        <Image source={image} style={{ height: 120, width: 120,borderRadius:5 }}></Image>
+        <View style={{}}>
           <Text
           numberOfLines={2}
             style={{
               color: COLORS.neutralDark,
+              marginTop: 8,
               fontSize: 12,
               height: 36,
               fontWeight: "700",
@@ -39,7 +39,7 @@ const ProductCardBigger = ({ image, name, cost, preCost, discount,rating, onPres
           >
             {name}
           </Text>
-          <StarRating ratings={rating}  />
+          <StarRating rating={rating}></StarRating>
           <Text
             style={{
               color: COLORS.primaryBlue,

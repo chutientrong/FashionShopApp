@@ -5,7 +5,7 @@ import { COLORS, FONTS } from "../../constants";
 
 const CountDownBox = ({ time, componentStyle }) => {
   return (
-    <View style={{ position: "absolute", marginLeft: 24, bottom: 45 }}>
+    <View style={{ position: "absolute", marginLeft: 32, bottom: 30 }}>
       <CountDown
         size={15}
         until={time}

@@ -1,13 +1,13 @@
 import React, { useLayoutEffect } from "react";
 import PropTypes from "prop-types";
-import { Button, ScrollView, StatusBar, Text, View } from "react-native";
+import { Button, Image, ScrollView, StatusBar, Text, View } from "react-native";
 import { useDispatch } from "react-redux";
 import { useNavigation } from "@react-navigation/native";
 import { logout } from "../redux/actions/authActions";
 import Header from "../components/Header";
 import SearchInput from "../components/SearchInput";
 import Icon from "react-native-vector-icons/Ionicons";
-import { COLORS, FONTS } from "../constants";
+import { COLORS, FONTS, WIDTH } from "../constants";
 import CarouselFlashSale from "../components/CarouselFlashSale";
 import { discount, flashsale } from "../models/FlashSaleFake";
 import TextButton from "../components/TextButton";
@@ -15,7 +15,11 @@ import Category from "../components/Category";
 import { category } from "../models/CategoryData";
 import FlashSale from "../components/FlashSale";
 import MegaSale from "../components/MegaSale";
-import { productFSsale, productMGsale, productRecommend } from "../models/ProductSale";
+import {
+  productFSsale,
+  productMGsale,
+  productRecommend,
+} from "../models/ProductSale";
 import Recommend from "../components/Recommend";
 
 const Home = ({ navigation }) => {
@@ -29,9 +33,10 @@ const Home = ({ navigation }) => {
   const handleLogout = () => {
     dispatch(logout);
   };
+
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
-      <ScrollView style={{}}>
+      <ScrollView nestedScrollEnabled={true}>
         <Header
           children={
             <View
@@ -55,7 +60,8 @@ const Home = ({ navigation }) => {
                 name="heart-outline"
                 color={COLORS.grey}
                 size={24}
-                style={{ fontWeight: "700" }}
+                style={{ fontWeight: "700", }}
+                onPress={()=>navigation.navigate('Favorite')}
               ></Icon>
               <Icon
                 name="notifications-outline"
@@ -71,13 +77,20 @@ const Home = ({ navigation }) => {
           style={{ flex: 1, height: 1, backgroundColor: COLORS.neutralLight }}
         />
         {/* CAROUSEL AND COUNT DOWN */}
-        <View style={{ marginLeft: 16,marginRight: 16, }}>
-          <CarouselFlashSale data={flashsale}></CarouselFlashSale>
+        <View style={{ marginTop: 16 }}>
+          <CarouselFlashSale data={flashsale} navigation={navigation}></CarouselFlashSale>
         </View>
 
         {/* CATEGORY */}
 
-        <View style={{ margin: 16, flexDirection: "column", height: 140 }}>
+        <View
+          style={{
+            margin: 16,
+            flexDirection: "column",
+            height: 140,
+            marginTop: 16,
+          }}
+        >
           <View
             style={{ flexDirection: "row", justifyContent: "space-between" }}
           >
@@ -182,7 +195,7 @@ const Home = ({ navigation }) => {
         </View>
 
         {/* RECOMMEND PRODUCT  */}
-        <View
+        {/* <View
           style={{
             // margin: 16,
             marginTop: 8,
@@ -190,10 +203,56 @@ const Home = ({ navigation }) => {
             // alignItems:"center"
             // height: 270,
           }}
+        > */}
+        <View
+          style={{ flext: 1, marginLeft: 16, width: WIDTH - 32, marginTop: 8 }}
         >
-          <Recommend data={productRecommend}></Recommend>
+          {/* <View style={{flext:1,borderRadius: 5, borderColor:"red",borderWidth:2}}> */}
+          <Image
+            source={require("../assets/images/product/recommend.png")}
+            style={{
+              flext: 1,
+              width: WIDTH - 32,
+              borderRadius: 5,
+              borderWidth: 2,
+            }}
+          ></Image>
+          {/* </View> */}
+          <Text
+            style={{
+              position: "absolute",
+              top: 48,
+              marginLeft: 32,
+              color: COLORS.white,
+              width: 170,
+              fontSize: 24,
+              fontWeight: "700",
+              ...FONTS.fontPopinRegular,
+              lineHeight: 36,
+              textAlignVertical: "top",
+            }}
+          >
+            Recommend Product
+          </Text>
+          <Text
+            style={{
+              position: "absolute",
+              bottom: 48,
+              marginLeft: 32,
+              color: COLORS.white,
+              fontSize: 12,
+              fontWeight: "400",
+              ...FONTS.fontPopinRegular,
+              lineHeight: 22,
+              textAlignVertical: "top",
+            }}
+          >
+            We recommend the best for you
+          </Text>
         </View>
-        
+        <ScrollView nestedScrollEnabled={true} horizontal={true}>
+          <Recommend data={productRecommend} ></Recommend>
+        </ScrollView>
       </ScrollView>
     </View>
   );

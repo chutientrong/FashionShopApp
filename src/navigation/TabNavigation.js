@@ -2,13 +2,15 @@ import * as React from 'react';
 // import { Appearance } from 'react-native-appearance';
 import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { COLORS} from '../constants';
-import Icon from "react-native-vector-icons/MaterialIcons";
+import Icon from "react-native-vector-icons/AntDesign";
+
 // grabs stacks
 import StackHome from './StackHome';
-import StackMulti from './StackMulti';
-import StackSettings from './StackSettings';
-import StackStats from './StackStats';
+import StackExplore from './StackExplore';
+import StackOffer from './StackOffer';
+import StackCart from './StackCart';
 import { View } from 'react-native';
+import StackAccount from './StackAccount';
 
 const Tab = createBottomTabNavigator();
 
@@ -35,7 +37,7 @@ export default () => {
   return (
     <Tab.Navigator
     screenOptions={{
-      tabBarShowLabel: false,
+      // tabBarShowLabel: false,
       headerShown: false,
       tabBarStyle: {
         position: 'absolute',
@@ -56,35 +58,52 @@ export default () => {
         component={StackHome}
         options={{
           tabBarIcon: ({focused}) => (
-            <Icon name='home' color={focused?COLORS.red2 : COLORS.gray2} size={30}></Icon>
+            <Icon name='home' color={focused?COLORS.red2 : COLORS.gray2} size={20}></Icon>
           ),
+          tabBarLabel:'Home'
         }}
       />
       <Tab.Screen
-        name="StackMulti"
-        component={StackMulti}
+        name="Explore"
+        component={StackExplore}
         options={{
           tabBarIcon: ({focused}) => (
-            <Icon name='home' color={focused?COLORS.red2 : COLORS.gray2} size={30}></Icon>
+            <Icon name='search1' color={focused?COLORS.red2 : COLORS.gray2} size={20}></Icon>
           ),
+          tabBarLabel:'Explore'
         }}
       />
       <Tab.Screen
-        name="StackStats"
-        component={StackStats}
+        name="Cart"
+        component={StackCart}
         options={{
           tabBarIcon: ({focused}) => (
-            <Icon name='home' color={focused?COLORS.red2 : COLORS.gray2} size={30}></Icon>
+            <Icon name='shoppingcart' color={focused?COLORS.red2 : COLORS.gray2} size={20}></Icon>
           ),
+          tabBarLabel:'Cart'
         }}
       />
       <Tab.Screen
-        name="StackSettings"
-        component={StackSettings}
+        name="Offer"
+        component={StackOffer}
         options={{
           tabBarIcon: ({focused}) => (
-            <Icon name='home' color={focused?COLORS.red2 : COLORS.gray2} size={30}></Icon>
+            <Icon name='tago' color={focused?COLORS.red2 : COLORS.gray2} size={20}></Icon>
+            
           ),
+          tabBarLabel:'Offer'
+        }}
+      />
+      <Tab.Screen
+        name="Account"
+        component={StackAccount}
+        options={{
+          tabBarIcon: ({focused}) => (
+            <Icon name='user' color={focused?COLORS.red2 : COLORS.gray2} size={20}></Icon>
+
+          ),
+          tabBarLabel:'Account'
+
         }}
       />
     </Tab.Navigator>

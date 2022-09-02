@@ -23,6 +23,7 @@ export default (Preview = ({
       onPress={() => onPress(item)}>
       <View style={[styles.imageContainer, styles.shadow]}>
         <Image
+        resizeMode="contain"
           style={[styles.videoPreview, active ? {} : {height: 120}]}
           source={{uri: item[imageKey]}}
         />

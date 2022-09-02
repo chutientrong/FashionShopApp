@@ -1,5 +1,6 @@
 import React from 'react';
 import {TouchableOpacity, Image, StyleSheet} from 'react-native';
+import { COLORS } from '../../constants';
 
 export default (ChildItem = ({
   item,
@@ -21,9 +22,15 @@ export default (ChildItem = ({
 });
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    // margin:16
+  },
   image: {
     height: 230,
     resizeMode: 'stretch',
+    marginRight:16,
+    borderRadius:5,
+    borderWidth:1,
+    borderColor:COLORS.neutralLight
   },
 });

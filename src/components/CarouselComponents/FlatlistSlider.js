@@ -21,7 +21,7 @@ export default class FlatListSlider extends Component {
     imageKey: 'image',
     local: false,
     width: Math.round(Dimensions.get('window').width),
-    height: 150,
+    height: 160,
     separatorWidth: 0,
     loop: true,
     indicator: true,
@@ -107,6 +107,7 @@ export default class FlatListSlider extends Component {
           })}
           windowSize={1}
           initialNumToRender={1}
+          initialScrollIndex={(this.state.data.length-1)/2}
           maxToRenderPerBatch={1}
           removeClippedSubviews={true}
         />
@@ -158,7 +159,12 @@ export default class FlatListSlider extends Component {
     if (this.props.animation) {
       LayoutAnimation.configureNext(LayoutAnimation.Presets.linear);
     }
-    this.setState({index: this.state.index + 1});
+    // this.setState({index: this.state.index + 1});
+    if (this.state.index < this.state.data.length-1) {
+      this.setState({ index: this.state.index + 1 });
+      }else{
+      this.setState({index:0})
+      }
     this.slider.current.scrollToIndex({
       index: this.state.index,
       animated: true,
@@ -184,6 +190,7 @@ const styles = StyleSheet.create({
   image: {
     height: 206,
     resizeMode: 'stretch',
+    // borderRadius:5
   },
   indicatorContainerStyle: {
     marginTop: 8,

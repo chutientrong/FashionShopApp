@@ -60,8 +60,8 @@ const Home = ({ navigation }) => {
                 name="heart-outline"
                 color={COLORS.grey}
                 size={24}
-                style={{ fontWeight: "700", }}
-                onPress={()=>navigation.navigate('Favorite')}
+                style={{ fontWeight: "700" }}
+                onPress={() => navigation.navigate("Favorite")}
               ></Icon>
               <Icon
                 name="notifications-outline"
@@ -78,7 +78,10 @@ const Home = ({ navigation }) => {
         />
         {/* CAROUSEL AND COUNT DOWN */}
         <View style={{ marginTop: 16 }}>
-          <CarouselFlashSale data={flashsale} navigation={navigation}></CarouselFlashSale>
+          <CarouselFlashSale
+            data={flashsale}
+            navigation={navigation}
+          ></CarouselFlashSale>
         </View>
 
         {/* CATEGORY */}
@@ -154,7 +157,10 @@ const Home = ({ navigation }) => {
               onPress={() => console.log("flash sale")}
             />
           </View>
-          <FlashSale data={productFSsale}></FlashSale>
+          <FlashSale
+            data={productFSsale}
+            onPress={() => console.log("aaaaa")}
+          ></FlashSale>
         </View>
 
         {/* MEGA SALE  */}
@@ -191,7 +197,7 @@ const Home = ({ navigation }) => {
               onPress={() => console.log("Mega sale")}
             />
           </View>
-          <MegaSale data={productMGsale}></MegaSale>
+          <MegaSale data={productMGsale} navigation={navigation}></MegaSale>
         </View>
 
         {/* RECOMMEND PRODUCT  */}
@@ -251,7 +257,10 @@ const Home = ({ navigation }) => {
           </Text>
         </View>
         <ScrollView nestedScrollEnabled={true} horizontal={true}>
-          <Recommend data={productRecommend} ></Recommend>
+          <Recommend
+            data={productRecommend}
+            navigation={navigation}
+          ></Recommend>
         </ScrollView>
       </ScrollView>
     </View>

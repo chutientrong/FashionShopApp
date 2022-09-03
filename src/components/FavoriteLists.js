@@ -1,10 +1,11 @@
-import { View, Text, FlatList } from 'react-native'
-import React from 'react'
-import ProductCardBigger from './ProductCardBigger';
+import { View, Text, FlatList } from "react-native";
+import React from "react";
+import ProductCardBigger from "./ProductCardBigger";
 
-const FavoriteLists = ({data,navigation}) => {
-    console.log("Favorite = ", data);
-    const renderItem = ({ item }) => (
+const FavoriteLists = ({ data, navigation }) => {
+  console.log("Favorite = ", data);
+  const renderItem = ({ item }) => (
+    <View>
       <ProductCardBigger
         image={item.image}
         name={item.name}
@@ -12,24 +13,27 @@ const FavoriteLists = ({data,navigation}) => {
         preCost={item.preCost}
         discount={item.discount}
         rating={item.rating}
-        onPress={() => console.log(item.title)}
+        onPressed={() => navigation.navigate('ProductDetails',item)}
+        showIconRemove={true}
+        onRemove={() => console.log("remove", item)}
       ></ProductCardBigger>
-    );
-    return (
-      <View style={{  }}>
-        <FlatList
-          data={data}
-          numColumns={2}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id}
-          contentContainerStyle={{
-         }}
-         showsVerticalScrollIndicator={false}
-         
-          // extraData={selectedId}
-        />
-      </View>
-    );
-  };
-  
-export default FavoriteLists
+    </View>
+  );
+  return (
+    <View style={{}}>
+      <FlatList
+        data={data}
+        numColumns={2}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={{}}
+        // onPress={()=>navigation.navigate('ProductDetails',item)}
+        showsVerticalScrollIndicator={false}
+
+        // extraData={selectedId}
+      />
+    </View>
+  );
+};
+
+export default FavoriteLists;

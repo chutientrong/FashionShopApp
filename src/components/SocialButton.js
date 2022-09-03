@@ -24,7 +24,7 @@ const SocialButton = ({
       disabled={disabled}
     >
       <Image source={image} style={{}}></Image>
-      <Text style={{ color: COLORS.grey, fontWeight: "700", ...labelStyle }}>
+      <Text style={{ color: COLORS.grey, fontWeight: "700", ...labelStyle,letterSpacing:0.5 }}>
         {label}
       </Text>
       <View></View>

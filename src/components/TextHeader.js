@@ -5,6 +5,7 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 const TextHeader = ({
   title,
   rightIconName,
+  rightIconName2,
   children,
   navigation,
 }) => {
@@ -16,7 +17,6 @@ const TextHeader = ({
         padding: 16,
         flexDirection: "column",
         justifyContent: "space-between",
-
       }}
     >
       <View style={{ marginBottom: 16 }}></View>
@@ -25,8 +25,8 @@ const TextHeader = ({
           flexDirection: "row",
           justifyContent: "space-between",
           alignItems: "center",
-          marginLeft:8,
-          marginRight:8
+          // marginLeft: 8,
+          // marginRight: 8,
         }}
       >
         <View
@@ -43,27 +43,50 @@ const TextHeader = ({
             style={{ fontWeight: "700" }}
             onPress={() => navigation.goBack()}
           ></Icon>
-          <Text
+          <View style={{ width: 200 }}>
+            <Text
+              numberOfLines={1}
+              style={{
+                color: COLORS.neutralDark,
+                // width:"80%",
+                // marginLeft: 12,
+                ...FONTS.fontPopinBold,
+                fontSize: 16,
+                fontWeight: "700",
+                lineHeight: 24,
+                textAlign: "left",letterSpacing:0.5
+              }}
+            >
+              {title}
+            </Text>
+          </View>
+        </View>
+        <View>
+          <View
             style={{
-              color:COLORS.neutralDark,
-              marginLeft: 12,
-              ...FONTS.fontPopinBold,
-              fontSize: 16,
-              fontWeight: "700",
-              lineHeight: 24,
+              flexDirection: "row",
+              // justifyContent: "space-between",
+              // alignItems: "center",
             }}
           >
-            {title}
-          </Text>
+            {rightIconName ? (
+              <Icon
+                name={rightIconName}
+                color={COLORS.grey}
+                size={24}
+                style={{ fontWeight: "400" }}
+              ></Icon>
+            ) : null}
+            {rightIconName2 ? (
+              <Icon
+                name={rightIconName2}
+                color={COLORS.grey}
+                size={24}
+                style={{ fontWeight: "400", marginLeft: 8 }}
+              ></Icon>
+            ) : null}
+          </View>
         </View>
-        {rightIconName ? (
-          <Icon
-            name={rightIconName}
-            color={COLORS.grey}
-            size={24}
-            style={{ fontWeight: "700" }}
-          ></Icon>
-        ) : null}
       </View>
       {children}
     </View>

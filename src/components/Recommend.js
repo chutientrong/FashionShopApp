@@ -11,7 +11,7 @@ import React from "react";
 import ProductCardBigger from "./ProductCardBigger";
 import { COLORS, FONTS, WIDTH } from "../constants";
 
-const Recommend = ({ data }) => {
+const Recommend = ({ data ,navigation}) => {
   console.log("Recommend = ", data);
   const renderItem = ({ item }) => (
     <ProductCardBigger
@@ -21,7 +21,7 @@ const Recommend = ({ data }) => {
       preCost={item.preCost}
       discount={item.discount}
       rating={item.rating}
-      onPress={() => console.log(item.title)}
+      onPressed={() => navigation.navigate('ProductDetails',item)}
     ></ProductCardBigger>
   );
   return (

@@ -57,7 +57,7 @@ export default function TextInput({
             marginLeft:16,
             color: COLORS.primaryRed,
             ...FONTS.bodyerror,
-            fontWeight: "700",
+            fontWeight: "700",letterSpacing:0.5
           }}
         >
           {errorMsg}

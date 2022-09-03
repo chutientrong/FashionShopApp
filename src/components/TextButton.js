@@ -28,13 +28,13 @@ const TextButton = ({
             textAlign: "left",
             color: COLORS.primary,
             ...FONTS.h3,
-            ...label2Style,
+            ...label2Style,letterSpacing:0.5
           }}
         >
           {label2}
         </Text>
       )}
-      <Text style={{ color: COLORS.white, fontWeight:"700",...labelStyle }}>
+      <Text style={{ color: COLORS.white, fontWeight:"700",...labelStyle,letterSpacing:0.5 }}>
         {label}
       </Text>
     </TouchableOpacity>

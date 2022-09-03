@@ -3,7 +3,7 @@ import React from 'react'
 import ProductCard from './ProductCard'
 import { COLORS } from '../constants';
 
-const MegaSale = ({ data }) => {
+const MegaSale = ({ data,navigation }) => {
   console.log("Mega = ",data);
   return (
     <View style={{height:244,marginTop:12}}>
@@ -22,7 +22,7 @@ const MegaSale = ({ data }) => {
               cost={item.cost}
               preCost={item.preCost}
               discount={item.discount}
-              onPress={() => console.log(item.title)}
+              onPressed={() => navigation.navigate('ProductDetails',item)}
             ></ProductCard>
           </View>
         ))}

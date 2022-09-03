@@ -26,9 +26,10 @@ const styles = StyleSheet.create({
     // margin:16
   },
   image: {
-    height: 230,
+    // margin:16,
+    // height: 230,
     resizeMode: 'stretch',
-    marginRight:16,
+    // marginRight:16,
     borderRadius:5,
     borderWidth:1,
     borderColor:COLORS.neutralLight

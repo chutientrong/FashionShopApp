@@ -2,7 +2,7 @@ import React from "react";
 import { FlatList, View } from "react-native";
 import ProductCardBigger from "./ProductCardBigger";
 
-const OfferLists = ({ data }) => {
+const OfferLists = ({ data,navigation }) => {
   console.log("Offer = ", data);
   const renderItem = ({ item }) => (
     <ProductCardBigger
@@ -12,7 +12,7 @@ const OfferLists = ({ data }) => {
       preCost={item.preCost}
       discount={item.discount}
       rating={item.rating}
-      onPress={() => console.log(item.title)}
+      onPressed={() => navigation.navigate('ProductDetails',item)}
     ></ProductCardBigger>
   );
   return (

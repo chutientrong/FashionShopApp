@@ -14,7 +14,7 @@ const CarouselFlashSale = ({ data,navigation }) => {
     <View
       style={{
         flex: 1,
-        height: 160,
+        // height: 160,
       }}
     >
       <FlatListSlider
@@ -23,15 +23,15 @@ const CarouselFlashSale = ({ data,navigation }) => {
         imageKey={"image"}
         local={false}
         width={WIDTH-32}
-        separator={0}
+        separatorWidth={16}
         loop={true}
         autoscroll={true}
-        
+        height={176}
         onPress={(item) => navigation.navigate('OfferDetails')}
         indicator
         animation
         contentContainerStyle={{
-          // width: WIDTH - 32,
+          marginLeft:16
         }}
       />
       <CountDownBox time={1000}></CountDownBox>

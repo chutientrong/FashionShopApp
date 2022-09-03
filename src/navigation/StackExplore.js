@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-
 // screens
 import Explore from '../screens/Explore';
-import MultiLevel2Screen from '../screens/MultiLevel2';
 
 // components
 

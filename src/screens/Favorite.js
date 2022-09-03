@@ -19,7 +19,7 @@ const Favorite = ({navigation}) => {
           style={{ flex: 1, height: 1, backgroundColor: COLORS.neutralLight }}
         />
         <ScrollView horizontal>
-          <FavoriteLists data={productRecommend}></FavoriteLists>
+          <FavoriteLists data={productRecommend} navigation={navigation}></FavoriteLists>
         </ScrollView>
       </ScrollView>
     </View>

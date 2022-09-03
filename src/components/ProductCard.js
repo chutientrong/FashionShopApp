@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { COLORS, FONTS } from "../constants";
 
-const ProductCard = ({ image, name, cost, preCost, discount, onPress }) => {
+const ProductCard = ({ image, name, cost, preCost, discount, onPress,navigation }) => {
   return (
     <TouchableOpacity
       style={{
@@ -32,7 +32,7 @@ const ProductCard = ({ image, name, cost, preCost, discount, onPress }) => {
             ...FONTS.fontPopinRegular,
             lineHeight: 18,
             textAlignVertical: "top",
-            textAlign: "left",
+            textAlign: "left",letterSpacing:0.5
             
           }}
         >
@@ -47,7 +47,7 @@ const ProductCard = ({ image, name, cost, preCost, discount, onPress }) => {
             fontWeight: "700",
             ...FONTS.fontPopinRegular,
             textAlignVertical: "top",
-            textAlign: "left",
+            textAlign: "left",letterSpacing:0.5
           }}
         >
           ${cost}
@@ -63,7 +63,7 @@ const ProductCard = ({ image, name, cost, preCost, discount, onPress }) => {
               ...FONTS.fontPopinRegular,
               textAlignVertical: "top",
               textDecorationLine: "line-through",
-              textAlign: "left",
+              textAlign: "left",letterSpacing:0.5
             }}
           >
             ${preCost}
@@ -78,7 +78,7 @@ const ProductCard = ({ image, name, cost, preCost, discount, onPress }) => {
               height: 15,
               fontWeight: "700",
               ...FONTS.fontPopinBold,
-              textAlignVertical: "top",
+              textAlignVertical: "top",letterSpacing:0.5
             }}
           >
             {discount}% Off

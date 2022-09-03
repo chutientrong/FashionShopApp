@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { COLORS } from "../constants";
+import { COLORS, FONTS } from "../constants";
 
 const StarRating = (props) => {
   // This array will contain our star tags. We will include this
@@ -11,7 +11,7 @@ const StarRating = (props) => {
   // Loop 5 times
   for (var i = 1; i <= 5; i++) {
     // set the path to filled stars
-    
+
     let color = COLORS.yellow;
     // If ratings is lower, set the path to unfilled stars
     if (i > props.rating) {
@@ -21,7 +21,7 @@ const StarRating = (props) => {
     stars.push(
       <Ionicons
         name={"ios-star"}
-        size={10}
+        size={props.size}
         style={{
           color: color,
         }}
@@ -31,11 +31,30 @@ const StarRating = (props) => {
   }
 
   return (
-    <View style={{ flexDirection: "row", alignItems: "center" }}>
+    <View style={{ flexDirection: "row", marginTop: 4 }}>
       {stars}
-      {/* <Text style={{ fontSize: 12, marginLeft: 5, color: COLORS.neutralLight }}>
-        ({props.reviews})
-      </Text> */}
+      {props.showReview ? (
+        <View style={{ marginLeft: 8 ,flexDirection: "row", }}>
+          <Text
+            style={{
+              fontSize: 10,
+              fontWeight: "700",
+              color: COLORS.grey,
+              textAlign:'center',
+              marginTop: 2 ,
+              letterSpacing: 0.5,
+              ...FONTS.fontPopinBold
+            }}
+          >
+            {props.rating}
+          </Text>
+          <Text
+            style={{ fontSize: 10, marginLeft: 3 , marginTop: 2 , color: COLORS.grey ,textAlign:'center',letterSpacing: 0.5}}
+          >
+            ({props.reviews} Reviews)
+          </Text>
+        </View>
+      ) : null}
     </View>
   );
 };

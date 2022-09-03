@@ -3,7 +3,7 @@ import React from 'react'
 import ProductCard from './ProductCard'
 import { COLORS } from '../constants';
 
-const FlashSale = ({ data }) => {
+const FlashSale = ({ data,onPress }) => {
   // console.log("Flash = ",data);
   return (
     <View style={{height:244,marginTop:12}}>
@@ -22,7 +22,8 @@ const FlashSale = ({ data }) => {
               cost={item.cost}
               preCost={item.preCost}
               discount={item.discount}
-              onPress={() => console.log(item.title)}
+              onPress={onPress}
+              // navigation={navigation}
             ></ProductCard>
           </View>
         ))}

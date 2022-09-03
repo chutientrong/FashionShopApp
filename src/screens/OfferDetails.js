@@ -35,7 +35,7 @@ const OfferDetails = ({ navigation }) => {
           <CountDownBox time={1000}></CountDownBox>
         </View>
         <ScrollView horizontal>
-          <OfferLists data={productRecommend}></OfferLists>
+          <OfferLists data={productRecommend} navigation={navigation}></OfferLists>
         </ScrollView>
       </ScrollView>
     </View>

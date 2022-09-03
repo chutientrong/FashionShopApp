@@ -9,16 +9,14 @@ import TextHeader from "../components/TextHeader";
 const OfferDetails = ({ navigation }) => {
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
+      <TextHeader
+        title={"Super Flash Sale"}
+        rightIconName={"search"}
+        navigation={navigation}
+      ></TextHeader>
+      {/* ADD LINE */}
+      <View style={{ height: 1, backgroundColor: COLORS.neutralLight }} />
       <ScrollView>
-        <TextHeader
-          title={"Super Flash Sale"}
-          rightIconName={"search"}
-          navigation={navigation}
-        ></TextHeader>
-        {/* ADD LINE */}
-        <View
-          style={{ flex: 1, height: 1, backgroundColor: COLORS.neutralLight }}
-        />
         <View
           style={{ flext: 1, marginLeft: 16, width: WIDTH - 32, marginTop: 16 }}
         >
@@ -35,7 +33,10 @@ const OfferDetails = ({ navigation }) => {
           <CountDownBox time={1000}></CountDownBox>
         </View>
         <ScrollView horizontal>
-          <OfferLists data={productRecommend} navigation={navigation}></OfferLists>
+          <OfferLists
+            data={productRecommend}
+            navigation={navigation}
+          ></OfferLists>
         </ScrollView>
       </ScrollView>
     </View>

@@ -9,8 +9,7 @@ import { COLORS, FONTS, icons, images, SIZES, WIDTH } from "../constants";
 import TextInput from "../components/TextInput";
 import TextButton from "../components/TextButton";
 import utils from "../utils/utils";
-import { MaterialIcons as Icon } from "react-native-vector-icons/MaterialIcons";
-import { useFormik } from "formik";
+
 import SocialButton from "../components/SocialButton";
 
 const Login = ({ navigation }) => {

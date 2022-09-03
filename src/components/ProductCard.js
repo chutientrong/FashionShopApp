@@ -2,7 +2,8 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { COLORS, FONTS } from "../constants";
 
-const ProductCard = ({ image, name, cost, preCost, discount, onPress,navigation }) => {
+const ProductCard = (props) => {
+console.log("data =",props)
   return (
     <TouchableOpacity
       style={{
@@ -17,9 +18,9 @@ const ProductCard = ({ image, name, cost, preCost, discount, onPress,navigation 
         borderColor: COLORS.neutralLight,
         padding:16
       }}
-      onpress={onPress}
+      onpress={props.onPressed}
     >
-      <Image source={image} style={{ height: 110, width: 110,borderRadius:5 }}></Image>
+      <Image source={props.image} style={{ height: 110, width: 110,borderRadius:5 }}></Image>
       <View style={{}}>
         <Text
         numberOfLines={2}
@@ -36,7 +37,7 @@ const ProductCard = ({ image, name, cost, preCost, discount, onPress,navigation 
             
           }}
         >
-          {name}
+          {props.name}
         </Text>
         <Text
           style={{
@@ -50,7 +51,7 @@ const ProductCard = ({ image, name, cost, preCost, discount, onPress,navigation 
             textAlign: "left",letterSpacing:0.5
           }}
         >
-          ${cost}
+          ${props.cost}
         </Text>
         <View style={{ flexDirection: "row" }}>
           <Text
@@ -66,7 +67,7 @@ const ProductCard = ({ image, name, cost, preCost, discount, onPress,navigation 
               textAlign: "left",letterSpacing:0.5
             }}
           >
-            ${preCost}
+            ${props.preCost}
           </Text>
 
           <Text
@@ -81,7 +82,7 @@ const ProductCard = ({ image, name, cost, preCost, discount, onPress,navigation 
               textAlignVertical: "top",letterSpacing:0.5
             }}
           >
-            {discount}% Off
+            {props.discount}% Off
           </Text>
         </View>
       </View>

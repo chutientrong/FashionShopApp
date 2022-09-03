@@ -21,61 +21,61 @@ import {
   productRecommend,
 } from "../models/ProductSale";
 import Recommend from "../components/Recommend";
+import ProductCard from "../components/ProductCard";
+import ProductDetails from "./ProductDetails";
 
 const Home = ({ navigation }) => {
   const dispatch = useDispatch();
-  const nav = useNavigation();
-  useLayoutEffect(() => {
-    nav.setOptions({
-      headerShown: false,
-    });
-  }, []);
   const handleLogout = () => {
     dispatch(logout);
   };
 
   return (
     <View style={{ flex: 1, backgroundColor: "white" }}>
+      <Header
+        children={
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <SearchInput
+              icon="search"
+              placeholder="Search Product"
+              autoCapitalize="none"
+              keyboardType="default"
+              keyboardAppearance="dark"
+              returnKeyType="next"
+              returnKeyLabel="next"
+              containerStyle={{}}
+            ></SearchInput>
+            <Icon
+              name="heart-outline"
+              color={COLORS.grey}
+              size={24}
+              style={{ fontWeight: "700" }}
+              onPress={() => navigation.navigate("Favorite")}
+            ></Icon>
+            <Icon
+              name="notifications-outline"
+              color={COLORS.grey}
+              size={24}
+              style={{ fontWeight: "700" }}
+              onPress={() => navigation.navigate("Notification")}
+            ></Icon>
+          </View>
+        }
+      ></Header>
+      {/* ADD LINE */}
+      <View
+        style={{
+          height: 1,
+          backgroundColor: COLORS.neutralLight,
+        }}
+      />
       <ScrollView nestedScrollEnabled={true}>
-        <Header
-          children={
-            <View
-              style={{
-                flexDirection: "row",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <SearchInput
-                icon="search"
-                placeholder="Search Product"
-                autoCapitalize="none"
-                keyboardType="default"
-                keyboardAppearance="dark"
-                returnKeyType="next"
-                returnKeyLabel="next"
-                containerStyle={{}}
-              ></SearchInput>
-              <Icon
-                name="heart-outline"
-                color={COLORS.grey}
-                size={24}
-                style={{ fontWeight: "700" }}
-                onPress={() => navigation.navigate("Favorite")}
-              ></Icon>
-              <Icon
-                name="notifications-outline"
-                color={COLORS.grey}
-                size={24}
-                style={{ fontWeight: "700" }}
-              ></Icon>
-            </View>
-          }
-        ></Header>
-        {/* ADD LINE */}
-        <View
-          style={{ flex: 1, height: 1, backgroundColor: COLORS.neutralLight }}
-        />
         {/* CAROUSEL AND COUNT DOWN */}
         <View style={{ marginTop: 16 }}>
           <CarouselFlashSale
@@ -116,7 +116,8 @@ const Home = ({ navigation }) => {
                 fontWeight: "700",
                 ...FONTS.btnFont,
               }}
-              onPress={() => console.log("category")}
+              // onPress={() => console.log("category")}
+              onPress={() => navigation.navigate("Reviews")}
             />
           </View>
           <Category data={category}></Category>
@@ -157,9 +158,11 @@ const Home = ({ navigation }) => {
               onPress={() => console.log("flash sale")}
             />
           </View>
+          
           <FlashSale
             data={productFSsale}
             onPress={() => console.log("aaaaa")}
+navigation={navigation}
           ></FlashSale>
         </View>
 
@@ -201,19 +204,9 @@ const Home = ({ navigation }) => {
         </View>
 
         {/* RECOMMEND PRODUCT  */}
-        {/* <View
-          style={{
-            // margin: 16,
-            marginTop: 8,
-            flexDirection: "column",
-            // alignItems:"center"
-            // height: 270,
-          }}
-        > */}
         <View
           style={{ flext: 1, marginLeft: 16, width: WIDTH - 32, marginTop: 8 }}
         >
-          {/* <View style={{flext:1,borderRadius: 5, borderColor:"red",borderWidth:2}}> */}
           <Image
             source={require("../assets/images/product/recommend.png")}
             style={{

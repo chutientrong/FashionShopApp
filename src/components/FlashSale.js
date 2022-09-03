@@ -3,8 +3,8 @@ import React from 'react'
 import ProductCard from './ProductCard'
 import { COLORS } from '../constants';
 
-const FlashSale = ({ data,onPress }) => {
-  // console.log("Flash = ",data);
+const FlashSale = ({ data,onPress,navigation }) => {
+  console.log("Flash = ",data);
   return (
     <View style={{height:244,marginTop:12}}>
       <ScrollView
@@ -22,8 +22,8 @@ const FlashSale = ({ data,onPress }) => {
               cost={item.cost}
               preCost={item.preCost}
               discount={item.discount}
-              onPress={onPress}
-              // navigation={navigation}
+              onPress={() => navigation.navigate('ProductDetails',item)}
+              navigation={navigation}
             ></ProductCard>
           </View>
         ))}

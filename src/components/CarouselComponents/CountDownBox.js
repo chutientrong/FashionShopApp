@@ -1,7 +1,8 @@
 import { View, Text } from "react-native";
 import React from "react";
-import CountDown from "react-native-countdown-component";
+
 import { COLORS, FONTS } from "../../constants";
+import CountDown from "./CountDown";
 
 const CountDownBox = ({ time, componentStyle }) => {
   return (

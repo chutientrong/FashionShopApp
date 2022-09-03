@@ -31,7 +31,7 @@ const ColorButton = ({ color }) => {
   return (
     <View style={{ marginRight: 16, marginTop: 12 }}>
       <TouchableOpacity
-        onPress={() => setSel(true)}
+        onPress={() => setSel(!sel)}
         style={{
           alignItems: "center",
           justifyContent: "center",

@@ -23,21 +23,19 @@ const ProductDetails = ({ route, navigation }) => {
   console.log("data ", data);
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.white }}>
+      <TextHeader
+        title={data.name}
+        rightIconName={"search"}
+        rightIconName2={"more-vert"}
+        navigation={navigation}
+      ></TextHeader>
+      {/* ADD LINE */}
+      <View style={{ height: 1, backgroundColor: COLORS.neutralLight }} />
       <ScrollView
         nestedScrollEnabled={true}
         showsHorizontalScrollIndicator={true}
-        style={{ flex: 1, height: "100%", }}
+        style={{ flex: 1 }}
       >
-        <TextHeader
-          title={data.name}
-          rightIconName={"search"}
-          rightIconName2={"more-vert"}
-          navigation={navigation}
-        ></TextHeader>
-        {/* ADD LINE */}
-        <View
-          style={{ flex: 1, height: 1, backgroundColor: COLORS.neutralLight }}
-        />
         <View style={{ marginTop: 16 }}>
           <FlatListSlider
             data={productimage}
@@ -248,7 +246,7 @@ const ProductDetails = ({ route, navigation }) => {
           </View>
         </View>
 
-        <View style={{ marginLeft: 16, marginTop: 16 }}>
+        <View style={{ margin: 16 }}>
           {/* SEEE MORE  */}
           <View
             style={{ flexDirection: "row", justifyContent: "space-between" }}
@@ -275,7 +273,7 @@ const ProductDetails = ({ route, navigation }) => {
                 fontWeight: "700",
                 ...FONTS.btnFont,
               }}
-              onPress={() => console.log("category")}
+              onPress={() => navigation.navigate("Reviews")}
             />
           </View>
 
@@ -291,14 +289,13 @@ const ProductDetails = ({ route, navigation }) => {
           <View style={{ flexDerection: "row", marginTop: 16 }}>
             {/* PROFILE  */}
 
-            <View style={{ flexDirection: 'row'}}>
-
+            <View style={{ flexDirection: "row" }}>
               <Image
-                style={{ width: 48, height: 48 , resizeMode:"stretch" }}
+                style={{ width: 48, height: 48, resizeMode: "stretch" }}
                 source={require("../assets/images/user/profile.png")}
               ></Image>
 
-              <View style={{ marginLeft:16}}>
+              <View style={{ marginLeft: 16 }}>
                 <Text
                   style={{
                     color: COLORS.neutralDark,
@@ -313,7 +310,6 @@ const ProductDetails = ({ route, navigation }) => {
                 </Text>
 
                 <StarRating rating={4.5} size={16}></StarRating>
-                
               </View>
             </View>
 
@@ -380,52 +376,49 @@ const ProductDetails = ({ route, navigation }) => {
             You May Also Like
           </Text>
 
-          <View style={{height:244,marginTop:12}}>
-      <ScrollView
-        horizontal
-        nestedScrollEnabled={true}
-        style={{ width: "100%" }}
-        showsHorizontalScrollIndicator={false}
-      >
-        {productMGsale.map((item, index) => (
-          <View key={index}>
-            {/* <Text>{item.name}</Text> */}
-            <ProductCard
-              image={item.image}
-              name={item.name}
-              cost={item.cost}
-              preCost={item.preCost}
-              discount={item.discount}
-              // navigation={navigation}
-            ></ProductCard>
+          <View style={{ height: 244, marginTop: 12 }}>
+            <ScrollView
+              horizontal
+              nestedScrollEnabled={true}
+              style={{ width: "100%" }}
+              showsHorizontalScrollIndicator={false}
+            >
+              {productMGsale.map((item, index) => (
+                <View key={index}>
+                  {/* <Text>{item.name}</Text> */}
+                  <ProductCard
+                    image={item.image}
+                    name={item.name}
+                    cost={item.cost}
+                    preCost={item.preCost}
+                    discount={item.discount}
+                    // navigation={navigation}
+                  ></ProductCard>
+                </View>
+              ))}
+            </ScrollView>
           </View>
-        ))}
-      </ScrollView>
-    </View>
         </View>
-        <View style={{ marginLeft: 16, marginTop: 16 }}>
+      </ScrollView>
+      <View style={{ marginLeft: 16, marginTop: 16 }}>
         <TextButton
-                  label="Add to Cart"
-                  // disabled={isEnableSignIn() ? false : true}
-                  buttonContainerStyle={{
-                    borderRadius: 5,
-                    height: 57,
-                    width: WIDTH - 32,
-                    padding: 16,
-                    backgroundColor: 
-                      COLORS.primaryBlue
-                     ,
-                  }}
-                  labelStyle={{
-                    color: COLORS.white,
-                    ...FONTS.btnFont,
-                  }}
-                  onPress={{}}
-                />
-        </View>
-        <View style={{ marginBottom: 100}}></View>
-      </ScrollView>
-
+          label="Add to Cart"
+          // disabled={isEnableSignIn() ? false : true}
+          buttonContainerStyle={{
+            borderRadius: 5,
+            height: 57,
+            width: WIDTH - 32,
+            padding: 16,
+            backgroundColor: COLORS.primaryBlue,
+          }}
+          labelStyle={{
+            color: COLORS.white,
+            ...FONTS.btnFont,
+          }}
+          onPress={{}}
+        />
+      </View>
+      <View style={{ marginBottom: 60 }}></View>
     </View>
   );
 };

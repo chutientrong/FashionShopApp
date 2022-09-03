@@ -31,7 +31,7 @@ const Home = ({ navigation }) => {
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={{ flex: 1, backgroundColor: COLORS.white }}>
       <Header
         children={
           <View
@@ -117,7 +117,7 @@ const Home = ({ navigation }) => {
                 ...FONTS.btnFont,
               }}
               // onPress={() => console.log("category")}
-              onPress={() => navigation.navigate("Reviews")}
+              onPress={() => navigation.navigate("NotificationFeed")}
             />
           </View>
           <Category data={category}></Category>

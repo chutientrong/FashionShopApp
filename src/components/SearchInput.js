@@ -35,7 +35,7 @@ const SearchInput = ({
             underlineColorAndroid="transparent"
             placeholderTextColor={COLORS.grey}
             showSoftInputOnFocus={true}
-            autoFocus={true}
+            // autoFocus={true}
             style={{
               color: COLORS.grey,
               fontSize: 12,

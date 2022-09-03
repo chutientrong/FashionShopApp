@@ -25,6 +25,11 @@ export default function StackAuth() {
     component={ForgotPassword}
     options={{ headerShown: false }}
   />
+<Stack.Screen
+    name="Splash"
+    component={Splash}
+    options={{ headerShown: false }}
+  />
 
     </Stack.Navigator>
   );

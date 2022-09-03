@@ -54,52 +54,52 @@ export default () => {
 
     >
       <Tab.Screen
-        name="StackHome"
+        name="HomeStack"
         component={StackHome}
         options={{
           tabBarIcon: ({focused}) => (
-            <Icon name='home' color={focused?COLORS.red2 : COLORS.gray2} size={20}></Icon>
+            <Icon name='home' color={focused?COLORS.red2 : COLORS.gray2} size={24}></Icon>
           ),
           tabBarLabel:'Home'
         }}
       />
       <Tab.Screen
-        name="Explore"
+        name="ExploreStack"
         component={StackExplore}
         options={{
           tabBarIcon: ({focused}) => (
-            <Icon name='search1' color={focused?COLORS.red2 : COLORS.gray2} size={20}></Icon>
+            <Icon name='search1' color={focused?COLORS.red2 : COLORS.gray2} size={24}></Icon>
           ),
           tabBarLabel:'Explore'
         }}
       />
       <Tab.Screen
-        name="Cart"
+        name="CartStack"
         component={StackCart}
         options={{
           tabBarIcon: ({focused}) => (
-            <Icon name='shoppingcart' color={focused?COLORS.red2 : COLORS.gray2} size={20}></Icon>
+            <Icon name='shoppingcart' color={focused?COLORS.red2 : COLORS.gray2} size={24}></Icon>
           ),
           tabBarLabel:'Cart'
         }}
       />
       <Tab.Screen
-        name="Offer"
+        name="OfferStack"
         component={StackOffer}
         options={{
           tabBarIcon: ({focused}) => (
-            <Icon name='tago' color={focused?COLORS.red2 : COLORS.gray2} size={20}></Icon>
+            <Icon name='tago' color={focused?COLORS.red2 : COLORS.gray2} size={24}></Icon>
             
           ),
           tabBarLabel:'Offer'
         }}
       />
       <Tab.Screen
-        name="Account"
+        name="AccountStack"
         component={StackAccount}
         options={{
           tabBarIcon: ({focused}) => (
-            <Icon name='user' color={focused?COLORS.red2 : COLORS.gray2} size={20}></Icon>
+            <Icon name='user' color={focused?COLORS.red2 : COLORS.gray2} size={24}></Icon>
 
           ),
           tabBarLabel:'Account'

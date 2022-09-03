@@ -3,9 +3,7 @@ import React, { useState } from "react";
 import TextHeader from "../components/TextHeader";
 import { COLORS, FONTS, WIDTH } from "../constants";
 import { productReview, reviewimage } from "../models/Review";
-
 import ReviewSortButton from "../components/ReviewSortButton";
-import StarRating from "../components/StarRating";
 import Review from "../components/Review";
 import TextButton from "../components/TextButton";
 
@@ -89,7 +87,7 @@ const Reviews = ({ navigation }) => {
             color: COLORS.white,
             ...FONTS.btnFont,
           }}
-            onPress={()=>navigation.navigate("WriteReview")}
+          onPress={() => navigation.navigate("WriteReview")}
         />
       </View>
       <View style={{ marginBottom: 60 }}></View>

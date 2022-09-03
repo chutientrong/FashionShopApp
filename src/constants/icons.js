@@ -24,7 +24,7 @@ const skirt = require('../assets/icons/category/skirt.png');
 const womanpants = require('../assets/icons/category/woman-pants.png');
 const womantshirt = require('../assets/icons/category/woman-tshirt.png');
 
-
+const transaction = require('../assets/icons/transaction.png');
 export default {
     logo,
     logo2,
@@ -49,4 +49,5 @@ export default {
     womanpants,
     womantshirt,
 
+    transaction
 };

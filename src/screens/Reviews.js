@@ -18,7 +18,8 @@ const Reviews = ({ navigation }) => {
       <View style={{ height: 1, backgroundColor: COLORS.neutralLight }} />
       <ScrollView>
         {/* ADD LINE */}
-
+        {/* ADD LINE */}
+        <View style={{ height: 1, backgroundColor: COLORS.neutralLight }} />
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <View
             style={{
@@ -65,9 +66,8 @@ const Reviews = ({ navigation }) => {
           </View>
         </ScrollView>
         <View style={{}}>
-        {productReview.map((item, index) => (
+          {productReview.map((item, index) => (
             <View key={index}>
-              
               <Review data={item}></Review>
               {/* <Review data={item}></Review> */}
             </View>
@@ -89,7 +89,7 @@ const Reviews = ({ navigation }) => {
             color: COLORS.white,
             ...FONTS.btnFont,
           }}
-        //   onPress={{}}
+            onPress={()=>navigation.navigate("WriteReview")}
         />
       </View>
       <View style={{ marginBottom: 60 }}></View>

@@ -17,6 +17,7 @@ export default function TextInput({
     : error
     ? COLORS.primaryRed
     : COLORS.neutralLight;
+    const [border,setBorder]=useState(COLORS.neutralLight);
   return (
     <View style={{ ...containerStyle }}>
       <View

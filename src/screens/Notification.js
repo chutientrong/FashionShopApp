@@ -1,10 +1,20 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import TextHeader from '../components/TextHeader'
+import { COLORS } from '../constants'
 
-const Notification = () => {
+const Notification = ({navigation}) => {
   return (
     <View>
-      <Text>Notification</Text>
+            <TextHeader
+        title={"Notification"}
+        rightIconName={"search"}
+        rightIconName2={"more-vert"}
+        navigation={navigation}
+      ></TextHeader>
+      {/* ADD LINE */}
+      <View style={{ height: 1, backgroundColor: COLORS.neutralLight }} />
+
     </View>
   )
 }

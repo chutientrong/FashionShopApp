@@ -49,7 +49,7 @@ const TextHeader = ({
               style={{
                 color: COLORS.neutralDark,
                 // width:"80%",
-                // marginLeft: 12,
+                marginLeft: 8,
                 ...FONTS.fontPopinBold,
                 fontSize: 16,
                 fontWeight: "700",

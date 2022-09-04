@@ -3,11 +3,15 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 // screens
 import Cart from '../screens/Cart';
+import ShipTo from '../screens/ShipTo';
+import PaymentMethod from '../screens/PaymentMethod';
 
 const Stack = createStackNavigator();
 
 export default () => (
   <Stack.Navigator>
-    <Stack.Screen name="Cart" component={Cart} />
+    <Stack.Screen name="Cart" component={Cart}   options={{ headerShown: false }}/>
+    <Stack.Screen name="ShipTo" component={ShipTo}   options={{ headerShown: false }}/>
+    <Stack.Screen name="PaymentMethod" component={PaymentMethod}   options={{ headerShown: false }}/>
   </Stack.Navigator>
 );

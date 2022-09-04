@@ -87,8 +87,9 @@ const TextHeader = ({
             ) : null}
           </View>
         </View>
+        {children}
       </View>
-      {children}
+     
     </View>
   );
 };

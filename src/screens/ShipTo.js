@@ -3,7 +3,7 @@ import React from "react";
 import { COLORS, FONTS, WIDTH } from "../constants";
 import TextHeader from "../components/TextHeader";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import Icon2 from "react-native-vector-icons/FontAwesome";
+
 import { shipinfo } from "../models/Ship";
 import ShipCard from "../components/ShipCard";
 import TextButton from "../components/TextButton";
@@ -32,7 +32,7 @@ const ShipTo = ({ navigation }) => {
 
 
       <ScrollView
-        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
       
       >
         {shipinfo.map((item, index) => (

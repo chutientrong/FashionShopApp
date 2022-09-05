@@ -12,6 +12,7 @@ const AppNavigator = () => {
   const { user, isLogin } = useSelector((state) => state.auth);
   // const isLogin = false;
   function renderScreens() {
+    
     return isLogin ? (
       <Stack.Screen name={"Tab"} component={TabNavigation} />
     ) : (

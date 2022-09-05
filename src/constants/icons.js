@@ -25,6 +25,9 @@ const womanpants = require('../assets/icons/category/woman-pants.png');
 const womantshirt = require('../assets/icons/category/woman-tshirt.png');
 
 const transaction = require('../assets/icons/transaction.png');
+const bank = require('../assets/icons/Bank.png');
+const creditcard = require('../assets/icons/CreditCard.png');
+const paypal = require('../assets/icons/Paypal.png');
 export default {
     logo,
     logo2,
@@ -49,5 +52,8 @@ export default {
     womanpants,
     womantshirt,
 
-    transaction
+    transaction,
+    bank,
+    creditcard,
+    paypal
 };

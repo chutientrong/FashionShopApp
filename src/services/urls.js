@@ -6,7 +6,7 @@
 // export const SIGNUP = getApiUrl("/api/user/register");
 // export const RESET_PASSWORD = getApiUrl("/api/user/changepassword");
 
-export const API_BASE_URL = "http://192.168.1.5:5000";
+export const API_BASE_URL = "http://192.168.1.50:5000";
 export const getApiUrl = (endpoint) => API_BASE_URL + endpoint;
 
 // End Points

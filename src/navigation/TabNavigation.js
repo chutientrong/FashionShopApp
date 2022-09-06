@@ -3,6 +3,7 @@ import * as React from 'react';
 import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { COLORS} from '../constants';
 import Icon from "react-native-vector-icons/AntDesign";
+import IconUser from "react-native-vector-icons/Feather";
 
 // grabs stacks
 import StackHome from './StackHome';
@@ -112,7 +113,7 @@ export default () => {
         component={StackAccount}
         options={{
           tabBarIcon: ({focused}) => (
-            <Icon name='user' color={focused?COLORS.red2 : COLORS.gray2} size={24}></Icon>
+            <IconUser name='user' color={focused?COLORS.red2 : COLORS.gray2} size={24}></IconUser>
 
           ),
           tabBarLabel:'Account'

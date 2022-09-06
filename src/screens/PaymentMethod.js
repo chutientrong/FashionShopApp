@@ -2,7 +2,8 @@ import { View, Text, TouchableHighlight,Image  } from "react-native";
 import React from "react";
 import { COLORS, FONTS, icons } from "../constants";
 import TextHeader from "../components/TextHeader";
-import Icon from "react-native-vector-icons/AntDesign";
+import Icon from "react-native-vector-icons/Feather";
+import Icon2 from "react-native-vector-icons/MaterialCommunityIcons";
 const PaymentMethod = ({ navigation }) => {
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.white }}>
@@ -15,7 +16,8 @@ const PaymentMethod = ({ navigation }) => {
         style={{ height: 56,textAlign: "center",padding:16 }}
       >
         <View style={{ flexDirection:"row",}}>
-          <Image source={icons.creditcard} style={{}}></Image>
+          <Icon name="credit-card" size={24} color={COLORS.primaryBlue}></Icon>
+          {/* <Image source={icons.creditcard} style={{width:24,height: 24,}}></Image> */}
           <Text
             style={{
               color: COLORS.neutralDark,
@@ -37,7 +39,7 @@ const PaymentMethod = ({ navigation }) => {
         style={{ height: 56,textAlign: "center",padding:16 }}
         >
           <View style={{ flexDirection:"row",}}>
-            <Image source={icons.paypal} style={{}}></Image>
+            <Image source={icons.paypal} style={{width:24,height: 24,}}></Image>
             <Text
               style={{
                 color: COLORS.neutralDark,
@@ -58,7 +60,8 @@ const PaymentMethod = ({ navigation }) => {
         style={{ height: 56,textAlign: "center",padding:16 }}
         >
           <View style={{ flexDirection:"row",}}>
-            <Image source={icons.bank} style={{}}></Image>
+            <Icon2 name="bank-outline" size={24} color={COLORS.primaryBlue}></Icon2>
+            {/* <Image source={icons.bank} style={{width:24,height: 24,}}></Image> */}
             <Text
               style={{
                 color: COLORS.neutralDark,

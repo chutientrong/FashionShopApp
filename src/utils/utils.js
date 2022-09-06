@@ -2,7 +2,7 @@ function isValidUsername(value) {
   /* 
     Full name 
   */
-  const re = /^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/gm;
+  const re = /^[a-zA-Z]{1,}(?: [a-zA-Z]+){0,5}$/gm;
   return re.test(String(value));
 }
 function validateUsername(value, setUsernameError) {

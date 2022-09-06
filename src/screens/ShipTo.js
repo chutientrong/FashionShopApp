@@ -29,42 +29,33 @@ const ShipTo = ({ navigation }) => {
       {/* ADD LINE */}
       <View style={{ height: 1, backgroundColor: COLORS.neutralLight }} />
 
-
-
-
-
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-      
-      >
+      <ScrollView showsVerticalScrollIndicator={false}>
         {shipinfo.map((item, index) => (
           <View key={index}>
             <ShipCard data={item}></ShipCard>
           </View>
         ))}
       </ScrollView>
-<View>
-
-
-      <View style={{ marginLeft: 16 }}>
-        <TextButton
-          label="Next"
-          // disabled={isEnableSignIn() ? false : true}
-          buttonContainerStyle={{
-            borderRadius: 5,
-            height: 57,
-            width: WIDTH - 32,
-            padding: 16,
-            backgroundColor: COLORS.primaryBlue,
-          }}
-          labelStyle={{
-            color: COLORS.white,
-            ...FONTS.btnFont,
-          }}
-          onPress={() => navigation.navigate("PaymentMethod")}
-        />
-      </View>
-      <View style={{ marginBottom: 50 }}></View>
+      <View>
+        <View style={{ marginLeft: 16 }}>
+          <TextButton
+            label="Next"
+            // disabled={isEnableSignIn() ? false : true}
+            buttonContainerStyle={{
+              borderRadius: 5,
+              height: 57,
+              width: WIDTH - 32,
+              padding: 16,
+              backgroundColor: COLORS.primaryBlue,
+            }}
+            labelStyle={{
+              color: COLORS.white,
+              ...FONTS.btnFont,
+            }}
+            onPress={() => navigation.navigate("PaymentMethod")}
+          />
+        </View>
+        <View style={{ marginBottom: 60 }}></View>
       </View>
     </View>
   );

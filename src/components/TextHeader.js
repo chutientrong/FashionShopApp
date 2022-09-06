@@ -2,6 +2,8 @@ import { View, Text } from "react-native";
 import React from "react";
 import { COLORS, FONTS, WIDTH } from "../constants";
 import Icon from "react-native-vector-icons/MaterialIcons";
+import Icon2 from "react-native-vector-icons/Ionicons";
+
 const TextHeader = ({
   title,
   rightIconName,
@@ -36,13 +38,12 @@ const TextHeader = ({
             alignItems: "center",
           }}
         >
-          <Icon
-            name="arrow-back-ios"
+          <Icon2
+            name="chevron-back-outline"
             color={COLORS.grey}
-            size={16}
-            style={{ fontWeight: "700" }}
+            size={24}
             onPress={() => navigation.goBack()}
-          ></Icon>
+          ></Icon2>
           <View style={{ width: 200 }}>
             <Text
               numberOfLines={1}
@@ -74,7 +75,7 @@ const TextHeader = ({
                 name={rightIconName}
                 color={COLORS.grey}
                 size={24}
-                style={{ fontWeight: "400" }}
+
               ></Icon>
             ) : null}
             {rightIconName2 ? (
@@ -82,7 +83,7 @@ const TextHeader = ({
                 name={rightIconName2}
                 color={COLORS.grey}
                 size={24}
-                style={{ fontWeight: "400", marginLeft: 8 }}
+                style={{  marginLeft: 8 }}
               ></Icon>
             ) : null}
           </View>

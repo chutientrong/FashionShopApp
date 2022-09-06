@@ -12,6 +12,8 @@ import {
 //   ViewPropTypes,
   Image,
 } from "react-native";
+import {ViewPropTypes} from 'deprecated-react-native-prop-types';
+
 
 // import {ViewPropTypes} from 'de'
 const s = StyleSheet.create({
@@ -38,7 +40,7 @@ export default class CCInput extends Component {
 
     status: PropTypes.oneOf(["valid", "invalid", "incomplete"]),
 
-    // containerStyle: ViewPropTypes.style,
+    containerStyle: ViewPropTypes.style,
     inputStyle: Text.propTypes.style,
     labelStyle: Text.propTypes.style,
     validColor: PropTypes.string,

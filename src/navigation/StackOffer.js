@@ -7,7 +7,7 @@ import Offer from '../screens/Offer';
 const Stack = createStackNavigator();
 
 export default () => (
-  <Stack.Navigator>
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
     <Stack.Screen name="Offer" component={Offer} />
   </Stack.Navigator>
 );

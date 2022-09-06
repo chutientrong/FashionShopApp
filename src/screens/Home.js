@@ -21,8 +21,7 @@ import {
   productRecommend,
 } from "../models/ProductSale";
 import Recommend from "../components/Recommend";
-import ProductCard from "../components/ProductCard";
-import ProductDetails from "./ProductDetails";
+
 
 const Home = ({ navigation }) => {
   const dispatch = useDispatch();

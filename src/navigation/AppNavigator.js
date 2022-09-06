@@ -2,7 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import StackAuth from "./StackAuth";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import TabNavigation from "./TabNavigation";
+import StackMain from "./StackMain";
+
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
@@ -12,9 +13,8 @@ const AppNavigator = () => {
   const { user, isLogin } = useSelector((state) => state.auth);
   // const isLogin = false;
   function renderScreens() {
-    
     return isLogin ? (
-      <Stack.Screen name={"Tab"} component={TabNavigation} />
+      <Stack.Screen name={"Main"} component={StackMain} />
     ) : (
       <Stack.Screen name={"StackAuth"} component={StackAuth} />
     );

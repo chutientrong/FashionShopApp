@@ -8,36 +8,7 @@ import CategoryCard from "../components/CategoryComponents/CategoryCard";
 import { manexplore, womanexplore } from "../models/Explore";
 import ExploreCard from "../components/ExploreCard";
 
-const Explore = () => {
-  // console.log("fulldata " , fulldata(manexplore))
-  // add null
-  // const a={
-  //   id: "",
-  //   title: "",
-  //   image: null,
-  // }
-  // const fulldata=(data)=>{
-  //   if(data.length %4 !=0){
-  // data.push({a})
-  // fulldata(data)
-  //   }else{
-  //     return data
-  //   }
-  // }
-  // console.log("fulldata " , fulldata(manexplore))
-
-  // const modifyData = (data) => {
-  //   const numColumns = 4;
-  //   var tmp = {};
-  //   console.log("data.length ", data.length);
-  //   for (let i = data.length; ; i++) {
-  //     if (i % numColumns != 0) {
-  //       data.push(tmp);
-  //     }
-  //     return data;
-  //   }
-  // };
-  // console.log("fulldata ", modifyData(womanexplore));
+const Explore = ({navigation}) => {
 
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.white }}>

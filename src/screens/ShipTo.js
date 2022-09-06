@@ -31,6 +31,8 @@ const ShipTo = ({ navigation }) => {
 
 
 
+
+
       <ScrollView
         showsVerticalScrollIndicator={false}
       
@@ -41,6 +43,8 @@ const ShipTo = ({ navigation }) => {
           </View>
         ))}
       </ScrollView>
+<View>
+
 
       <View style={{ marginLeft: 16 }}>
         <TextButton
@@ -60,7 +64,8 @@ const ShipTo = ({ navigation }) => {
           onPress={() => navigation.navigate("PaymentMethod")}
         />
       </View>
-      <View style={{ marginBottom: 60 }}></View>
+      <View style={{ marginBottom: 50 }}></View>
+      </View>
     </View>
   );
 };

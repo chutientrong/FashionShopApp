@@ -19,19 +19,31 @@ const CustomTabBar = props => {
     <View>
       <View
         style={{
-          position: 'absolute',
-          bottom: 0,
+          // position: 'absolute',
+          // bottom: 0,
           left: 0,
           right: 0,
           height: 20,
           backgroundColor: COLORS.gray3,
+          alignItems:"center"
+
         }}
       />
       <BottomTabBar {...props.props} />
     </View>
   );
 };
+const getTabBarVisibility = (route) => {
+  const routeName = route.state
+      ? route.state.routes[route.state.index].name
+      : '';
 
+  if (routeName === 'Home') {
+      return true;
+  }
+
+  return false;
+};
 export default () => {
 
   return (
@@ -56,12 +68,13 @@ export default () => {
       <Tab.Screen
         name="HomeStack"
         component={StackHome}
-        options={{
+        options={({ route }) => ({
           tabBarIcon: ({focused}) => (
             <Icon name='home' color={focused?COLORS.red2 : COLORS.gray2} size={24}></Icon>
           ),
-          tabBarLabel:'Home'
-        }}
+          tabBarLabel:'Home',
+          tabBarVisible: getTabBarVisibility(route),
+        })}
       />
       <Tab.Screen
         name="ExploreStack"

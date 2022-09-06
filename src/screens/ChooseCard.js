@@ -1,13 +1,13 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import TextHeader from '../components/TextHeader'
+import { View, Text } from "react-native";
+import React from "react";
+import TextHeader from "../components/TextHeader";
 import Icon from "react-native-vector-icons/MaterialIcons";
-import { COLORS, FONTS } from '../constants';
-// import CreditCard from '../components/CreditCard';
+import { COLORS, FONTS, WIDTH } from "../constants";
+import TextButton from "../components/TextButton";
+import CreditCard from "../components/CreditCard";
+import { creditcard } from "../models/CreditCard";
 
-const ChooseCard = ({navigation}) => {
-    _onChange = (formData) => console.log(JSON.stringify(formData, null, " "));
-    _onFocus = (field) => console.log("focusing", field);
+const ChooseCard = ({ navigation }) => {
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.white }}>
       <TextHeader
@@ -27,21 +27,43 @@ const ChooseCard = ({navigation}) => {
         }
       ></TextHeader>
       {/* ADD LINE */}
-      <View style={{ height: 1, backgroundColor: COLORS.neutralLight }} />
+      <View
+        style={{
+          height: 1,
+          backgroundColor: COLORS.neutralLight,
+        }}
+      />
+      <View
+        style={{flex:1,
+          justifyContent: "space-between",
+        }}
+      >
+        <View style={{ margin: 16 }}>
+          <CreditCard data={creditcard}></CreditCard>
+        </View>
 
-{/* <CreditCard autoFocus
-              inputStyle={s.input}
-
-              validColor={"black"}
-              invalidColor={"red"}
-              placeholderColor={"darkgray"}
-
-              onFocus={this._onFocus}
-              onChange={this._onChange}>
-
-</CreditCard> */}
+        <View style={{ marginLeft: 16 }}>
+          <TextButton
+            label="Next"
+            // disabled={isEnableSignIn() ? false : true}
+            buttonContainerStyle={{
+              borderRadius: 5,
+              height: 57,
+              width: WIDTH - 32,
+              padding: 16,
+              backgroundColor: COLORS.primaryBlue,
+            }}
+            labelStyle={{
+              color: COLORS.white,
+              ...FONTS.btnFont,
+            }}
+            onPress={() => navigation.navigate("PaySuccess")}
+          />
+          <View style={{ marginBottom: 60 }}></View>
+        </View>
+      </View>
     </View>
-  )
-}
+  );
+};
 
-export default ChooseCard
+export default ChooseCard;

@@ -15,7 +15,7 @@ export const COLORS = {
   lightOrange3: '#FFD9AD',
   green: '#27AE60',
   primaryGreen:'#53D1B6',
-  primaryPurple:'#5C61F4',
+  
   red: '#E13510',
   red2: '#FF6C44',
   primaryRed:'#FB7181',
@@ -39,7 +39,8 @@ export const COLORS = {
   neutralLight:'#EBF0FF',
   neutralDark:'#223263',
   primaryDark:'#223263',
-
+  primaryPurple:'#5C61F4',
+  
   active: '#3498db',
   inactive: '#bdc3c7',
   

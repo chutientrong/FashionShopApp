@@ -28,11 +28,15 @@ const CarouselFlashSale = ({ data,navigation }) => {
         onPress={(item) => navigation.navigate('OfferDetails')}
         indicator
         animation
+        
         contentContainerStyle={{
           marginLeft:16
         }}
       />
+      <View style={{position: "absolute", marginLeft: 32, bottom: 30 }}>
       <CountDownBox time={1000}></CountDownBox>
+      </View>
+
     </View>
   );
 };

@@ -6,7 +6,7 @@ import CountDown from "./CountDown";
 
 const CountDownBox = ({ time, componentStyle }) => {
   return (
-    <View style={{ position: "absolute", marginLeft: 32, bottom: 30 }}>
+    <View style={{ }}>
       <CountDown
         size={15}
         until={time}

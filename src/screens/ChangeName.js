@@ -17,7 +17,7 @@ const ChangeName = ({ navigation }) => {
   console.log("lname ", lname);
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.white }}>
-      <TextHeader title={"Change Name"} navigation={navigation}></TextHeader>
+      <TextHeader title={"Name"} navigation={navigation}></TextHeader>
       {/* ADD LINE */}
       <View style={{ height: 1, backgroundColor: COLORS.neutralLight }} />
       <View style={{ flex: 1, justifyContent: "space-between" }}>

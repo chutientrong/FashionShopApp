@@ -156,7 +156,7 @@ const Register = ({ navigation }) => {
               errorMsg={cfPasswordError}
             />
             <TextButton
-              label="Sign In"
+              label="Sign Up"
               disabled={isEnableSignUp() ? false : true}
               buttonContainerStyle={{
                 borderRadius: 5,

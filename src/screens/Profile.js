@@ -3,7 +3,8 @@ import React from "react";
 import { COLORS, FONTS, images } from "../constants";
 import TextHeader from "../components/TextHeader";
 import Icon from "react-native-vector-icons/Ionicons";
-
+import Icon2 from "react-native-vector-icons/MaterialIcons";
+import Icon3 from "react-native-vector-icons/Feather";
 const Profile = ({ navigation }) => {
   return (
     <View style={{ flex: 1, backgroundColor: COLORS.white }}>
@@ -121,11 +122,11 @@ const Profile = ({ navigation }) => {
                 // alignSelf: "center",
               }}
             >
-              <Icon
-                name="female-sharp"
+              <Icon3
+                name="calendar"
                 size={24}
                 color={COLORS.primaryBlue}
-              ></Icon>
+              ></Icon3>
               <Text
                 style={{
                   color: COLORS.neutralDark,
@@ -181,11 +182,11 @@ const Profile = ({ navigation }) => {
                 // alignSelf: "center",
               }}
             >
-              <Icon
-                name="female-sharp"
+              <Icon2
+                name="mail-outline"
                 size={24}
                 color={COLORS.primaryBlue}
-              ></Icon>
+              ></Icon2>
               <Text
                 style={{
                   color: COLORS.neutralDark,
@@ -241,11 +242,11 @@ const Profile = ({ navigation }) => {
                 // alignSelf: "center",
               }}
             >
-              <Icon
-                name="female-sharp"
+              <Icon3
+                name="smartphone"
                 size={24}
                 color={COLORS.primaryBlue}
-              ></Icon>
+              ></Icon3>
               <Text
                 style={{
                   color: COLORS.neutralDark,
@@ -301,11 +302,11 @@ const Profile = ({ navigation }) => {
                 // alignSelf: "center",
               }}
             >
-              <Icon
-                name="female-sharp"
+              <Icon2
+                name="lock-outline"
                 size={24}
                 color={COLORS.primaryBlue}
-              ></Icon>
+              ></Icon2>
               <Text
                 style={{
                   color: COLORS.neutralDark,

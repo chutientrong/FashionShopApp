@@ -171,7 +171,7 @@ const Login = ({ navigation }) => {
                     height: 57,
                     width: WIDTH - 32,
                     padding: 16,
-                    marginTop: 16,
+                    // marginTop: 16,
                   }}
                   image={images.google}
                   label="Login with Google"
@@ -183,7 +183,7 @@ const Login = ({ navigation }) => {
                     height: 57,
                     width: WIDTH - 32,
                     padding: 16,
-                    marginTop: 8,
+                    // marginTop: 8,
                   }}
                   image={images.facebook}
                   label="Login with Facebook"

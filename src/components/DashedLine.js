@@ -12,7 +12,7 @@ const DashedLine = ({spacing,color}) => {
         {dashes.map((_, index) => (
           <Rect
             key={index}
-            x="11"
+            x="0"
             y="10"
             width="10"
             height="1"

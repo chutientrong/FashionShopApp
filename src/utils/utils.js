@@ -67,9 +67,9 @@ function validateCfPassword(value, password, setCfPasswordError) {
   }
 }
 
-function validateInput(value, minLength, setError) {
-  if (value.length < minLength) {
-    setError("Invalid Input");
+function validateInput(value, setError) {
+  if (value.length < 1) {
+    setError("Opps! Please Fill The Form");
   } else {
     setError("");
   }
@@ -79,8 +79,7 @@ function isValidCoupon(value, coupon) {
   /* 
   Coupon
 */
-console.log("value",value)
-console.log("coupon",coupon)
+
   if(value === coupon) return true 
   else return false;
 }
@@ -94,6 +93,27 @@ function validateCoupon(value, setCouponError, coupon) {
     setCouponError("* Your Coupon Is Not Correct");
   }
 }
+
+function isValidPhone(value) {
+  /* 
+    Full name 
+  */
+  const re = /^(\+{0,})(\d{0,})([(]{1}\d{1,3}[)]{0,}){0,}(\s?\d+|\+\d{2,3}\s{1}\d+|\d+){1}[\s|-]?\d+([\s|-]?\d+){1,2}(\s){0,}$/gm;
+  return re.test(String(value));
+}
+function validatePhone(value, setPhoneError) {
+  if (value == "") {
+    setPhoneError("");
+  } else if (isValidPhone(value)) {
+    setPhoneError("");
+  } else {
+    setPhoneError("Your Phone Is Not Correct");
+  }
+}
+
+
+
+
 
 function calculateAngle(coordinates) {
   let startLat = coordinates[0]["latitude"];
@@ -116,7 +136,10 @@ const utils = {
   validateCfPassword,
   validateInput,
   validateCoupon,
+  isValidPhone,
+  validatePhone,
   calculateAngle,
+
 };
 
 export default utils;

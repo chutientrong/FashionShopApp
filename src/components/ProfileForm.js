@@ -3,14 +3,14 @@ import React from 'react'
 import { COLORS, FONTS } from '../constants';
 import { useState } from 'react';
 
-const ProfileForm = ({error,errorMsg,onChange,active,value,numberOfLines}) => {
+const ProfileForm = ({error,errorMsg,onChange,active,value,numberOfLines,containerStyle}) => {
 
     let validationColor = error
     ? COLORS.primaryRed
     : COLORS.primaryBlue;
 
   return (
-    <View>
+    <View style={{...containerStyle}}>
       <View
         style={{
           height: 45,
@@ -34,7 +34,6 @@ const ProfileForm = ({error,errorMsg,onChange,active,value,numberOfLines}) => {
           style={{
             color: COLORS.grey,
 
-            alignItems: "center",
             paddingHorizontal: 14,
             fontSize: 15,
 

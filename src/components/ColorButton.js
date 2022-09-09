@@ -42,17 +42,14 @@ const ColorButton = ({ color }) => {
         }}
       >
         {sel ? (
-          <TouchableOpacity
-            onPress={null}
-            style={{
-              alignItems: "center",
-              justifyContent: "center",
-              width: 24,
-              height: 24,
-              backgroundColor: COLORS.white,
-              borderRadius: 50,
-            }}
-          ></TouchableOpacity>
+          <View style={{
+            alignItems: "center",
+            justifyContent: "center",
+            width: 20,
+            height: 20,
+            backgroundColor: COLORS.white,
+            borderRadius: 50,
+          }}></View>
         ) : null}
       </TouchableOpacity>
     </View>

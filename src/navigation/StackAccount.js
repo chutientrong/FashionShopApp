@@ -5,16 +5,19 @@ import StackProfile from './StackProfile';
 import StackAddress from './StackAddress';
 import StackOrder from './StackOrder';
 import StackPayment from './StackPayment';
+import StackAuth from './StackAuth';
 // screens
 
 const Stack = createStackNavigator();
 
 export default () => (
-  <Stack.Navigator screenOptions={{ headerShown: false }}>
+  <Stack.Navigator screenOptions={{ headerShown: false, }} 
+ >
     <Stack.Screen name="Account" component={Account} />
     <Stack.Screen name="StackProfile" component={StackProfile} />
     <Stack.Screen name="StackAddress" component={StackAddress} />
     <Stack.Screen name="StackOrder" component={StackOrder} />
     <Stack.Screen name="StackPayment" component={StackPayment} />
+    <Stack.Screen name="StackAuth" component={StackAuth} />
   </Stack.Navigator>
 );

@@ -145,6 +145,7 @@ const Login = ({ navigation }) => {
                     ...FONTS.btnFont,
                   }}
                   onPress={handleLogin}
+                  // onPress={()=>navigation.navigate("Main")} // FOR RELEASE
                 />
               </View>
               <View

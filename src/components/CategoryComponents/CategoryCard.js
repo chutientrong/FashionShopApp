@@ -16,7 +16,19 @@ const CategoryCard = ({ image, title, onPress }) => {
       }}
       onPress={onPress}
     >
-      <Image source={image} style={{ height: 70, width: 70, }}></Image>
+      <View
+        style={{
+          height: 70,
+          width: 70,
+          borderWidth: 1,
+          borderRadius: 50,
+          borderColor: COLORS.neutralLight,
+          alignItems: "center",
+          justifyContent:"center"
+        }}
+      >
+        <Image source={image} style={{ height: 24, width: 24 }}></Image>
+      </View>
       <Text
         style={{
           color: COLORS.grey,

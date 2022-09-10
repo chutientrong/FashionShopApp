@@ -21,6 +21,7 @@ export const COLORS = {
   primaryRed:'#FB7181',
   blue: '#0064C0',
   primaryBlue:'#40BFFF',
+
   lightBlue: '#72bcd4',
   darkBlue: '#111A2C',
   darkGray: '#525C67',
@@ -43,7 +44,7 @@ export const COLORS = {
   
   active: '#3498db',
   inactive: '#bdc3c7',
-  
+  bgBlue:"#40bfff1A",
   transparent: 'transparent',
   transparentWhite1: 'rgba(255, 255, 255, 0.1)',
   transparentBlack1: 'rgba(0, 0, 0, 0.1)',

@@ -3,7 +3,7 @@ import React from 'react'
 import { COLORS, FONTS } from '../constants';
 import { useState } from 'react';
 
-const ProfileForm = ({error,errorMsg,onChange,active,value,numberOfLines,containerStyle}) => {
+const ProfileForm = ({error,errorMsg,onChange,placeholder,value,numberOfLines,containerStyle,}) => {
 
     let validationColor = error
     ? COLORS.primaryRed
@@ -19,13 +19,15 @@ const ProfileForm = ({error,errorMsg,onChange,active,value,numberOfLines,contain
           borderColor: validationColor,
           borderRadius: 5,
           borderWidth: 1,
-          justifyContent: "space-between",
+          // justifyContent: "space-between",
         }}
       >
+        
         <TextInput
           numberOfLines={numberOfLines||1}
           placeholderTextColor={COLORS.grey}
           keyboardAppearance="dark"
+          placeholder={placeholder}
           
           // autoFocus={true}
           onChangeText={(text) => onChange(text)}

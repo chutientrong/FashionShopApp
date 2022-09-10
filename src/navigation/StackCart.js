@@ -7,7 +7,8 @@ import ShipTo from '../screens/ShipTo';
 import PaymentMethod from '../screens/PaymentMethod';
 import ChooseCard from '../screens/ChooseCard';
 import PaySuccess from '../screens/PaySuccess';
-import Order from '../screens/Order';
+import StackOrder from './StackOrder';
+
 
 const Stack = createStackNavigator();
 
@@ -18,6 +19,6 @@ export default () => (
     <Stack.Screen name="PaymentMethod" component={PaymentMethod}  />
     <Stack.Screen name="ChooseCard" component={ChooseCard}  />
     <Stack.Screen name="PaySuccess" component={PaySuccess}   />
-    <Stack.Screen name="Order" component={Order}   />
+    <Stack.Screen name="StackOrder" component={StackOrder}   />
   </Stack.Navigator>
 );

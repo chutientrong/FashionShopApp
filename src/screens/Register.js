@@ -10,8 +10,6 @@ import TextInput from "../components/TextInput";
 import TextButton from "../components/TextButton";
 import utils from "../utils/utils";
 
-import SocialButton from "../components/SocialButton";
-
 const Register = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -67,12 +65,10 @@ const Register = ({ navigation }) => {
       <ScrollView>
         <AuthLayout title="Let's Get Started" subTitle="Create a new account">
           <View
-            style={
-              {
-                flex: 1,
-                // marginTop: SIZES.sm,
-              }
-            }
+            style={{
+              flex: 1,
+              // marginTop: SIZES.sm,
+            }}
           >
             <View></View>
             <TextInput
@@ -175,7 +171,8 @@ const Register = ({ navigation }) => {
                 color: COLORS.white,
                 ...FONTS.btnFont,
               }}
-              onPress={handleRegister}
+              // onPress={handleRegister}
+              onPress={()=>navigation.navigate("Main")}
             />
           </View>
 
@@ -187,7 +184,7 @@ const Register = ({ navigation }) => {
             }}
           >
             <Text style={{ marginTop: 4, color: COLORS.grey, ...FONTS.body5 }}>
-              Have an account? 
+              Have an account?
             </Text>
             <TextButton
               label=" Sign In"

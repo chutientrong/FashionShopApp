@@ -12,6 +12,8 @@ import WriteReview from "../screens/WriteReview";
 import NotificationOffer from "../screens/NotificationOffer";
 import NotificationFeed from "../screens/NotificationFeed";
 import NotificationActivity from "../screens/NotificationActivity";
+import StackSearch from "./StackSearch";
+import SearchFilter from "../screens/SearchFilter";
 
 const Stack = createStackNavigator();
 
@@ -30,5 +32,7 @@ export default () => (
       name="NotificationActivity"
       component={NotificationActivity}
     />
+      <Stack.Screen name="StackSearch" component={StackSearch} />
+      <Stack.Screen name="SearchFilter" component={SearchFilter} />
   </Stack.Navigator>
 );

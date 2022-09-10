@@ -8,6 +8,7 @@ import { useState } from "react";
 import { countrylist } from "../models/Address";
 import ProfileForm from "../components/ProfileForm";
 import utils from "../utils/utils";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const AddAddress = ({ navigation }) => {
   const country = "United States";
@@ -33,6 +34,7 @@ const AddAddress = ({ navigation }) => {
   const [phone, setPhone] = useState("");
   const [phoneError, setPhoneError] = useState("");
   return (
+    <SafeAreaView style={{flex: 1,  }}>
     <View style={{ flex: 1, backgroundColor: COLORS.white }}>
       <TextHeader title={"Address"} navigation={navigation}></TextHeader>
       {/* ADD LINE */}
@@ -394,8 +396,8 @@ const AddAddress = ({ navigation }) => {
           />
         </View>
       </View>
-      <View style={{ marginBottom: 60 }}></View>
-    </View>
+      {/* <View style={{ marginBottom: 60 }}></View> */}
+    </View></SafeAreaView>
   );
 };
 

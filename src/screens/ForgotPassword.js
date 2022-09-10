@@ -1,17 +1,18 @@
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
-import { COLORS, FONTS, SIZES, WIDTH } from '../constants';
-import TextButton from '../components/TextButton';
-import TextInput from '../components/TextInput';
-import AuthLayout from './AuthLayout';
-import utils from '../utils/utils';
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
+import { COLORS, FONTS, SIZES, WIDTH } from "../constants";
+import TextButton from "../components/TextButton";
+import TextInput from "../components/TextInput";
+import AuthLayout from "./AuthLayout";
+import utils from "../utils/utils";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-const ForgotPassword = ({navigation}) => {
+const ForgotPassword = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
 
   function isEnableReset() {
-    return email != ""&& emailError == "";
+    return email != "" && emailError == "";
   }
 
   return (
@@ -24,17 +25,16 @@ const ForgotPassword = ({navigation}) => {
       }}
     >
       <ScrollView>
-        <AuthLayout title="Forgot Password" subTitle="Fill you email to reset your password">
+        <AuthLayout
+          title="Forgot Password"
+          subTitle="Fill you email to reset your password"
+        >
           <View
-            style={
-              {
-                flex: 1,
-                // marginTop: SIZES.sm,
-              }
-            }
+            style={{
+              flex: 1,
+              // marginTop: SIZES.sm,
+            }}
           >
-            
-            
             <TextInput
               icon="mail-outline"
               placeholder="Your email"
@@ -55,7 +55,7 @@ const ForgotPassword = ({navigation}) => {
               error={emailError ? true : false}
               errorMsg={emailError}
             />
-            
+
             <TextButton
               label="Reset Password"
               disabled={isEnableReset() ? false : true}
@@ -88,7 +88,7 @@ const ForgotPassword = ({navigation}) => {
             }}
           >
             <Text style={{ marginTop: 4, color: COLORS.grey, ...FONTS.body5 }}>
-              Have an account? 
+              Have an account?
             </Text>
             <TextButton
               label=" Sign In"
@@ -106,8 +106,8 @@ const ForgotPassword = ({navigation}) => {
       </ScrollView>
     </SafeAreaView>
   );
-}
+};
 
-export default ForgotPassword
+export default ForgotPassword;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

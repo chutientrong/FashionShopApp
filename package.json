@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@expo/webpack-config": "~0.17.2",
+    "@ptomasroos/react-native-multi-slider": "^2.2.2",
     "@react-native-async-storage/async-storage": "^1.17.10",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/bottom-tabs": "^6.3.3",
@@ -21,6 +22,7 @@
     "@react-navigation/native-stack": "^6.8.0",
     "@react-navigation/stack": "^6.2.3",
     "axios": "^0.27.2",
+    "deprecated-react-native-prop-types": "^2.3.0",
     "expo": "~46.0.9",
     "expo-app-loading": "^2.1.0",
     "expo-font": "^10.2.0",
@@ -48,6 +50,7 @@
     "redux": "^4.2.0",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.1",
+    "rn-range-slider": "^2.1.1",
     "sprintf-js": "^1.1.2",
     "webpack-dev-server": "~4.10.1"
   },

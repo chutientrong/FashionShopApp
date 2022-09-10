@@ -1,20 +1,11 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import React, {
-  useState,
-  useEffect,
-  componentDidMount,
-  Component,
-} from "react";
-// import auth from '@react-native-firebase/auth';
+import React, { Component } from "react";
+
 import { Image, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { useDispatch } from "react-redux";
 import { icons } from "../constants";
-import AppNavigator from "../navigation/AppNavigator";
-import AppStack from "../navigation/AppNavigator";
-import * as authActions from "../redux/actions/authActions";
 
 class Splash extends Component {
-
   performTimeConsumingTask = async () => {
     return new Promise((resolve) =>
       setTimeout(() => {
@@ -27,8 +18,7 @@ class Splash extends Component {
     const data = await this.performTimeConsumingTask();
 
     if (data !== null) {
-      
-      this.props.navigation.replace('AppNavigator');
+      this.props.navigation.replace("AppNavigator");
     }
   }
 
@@ -53,9 +43,11 @@ class Splash extends Component {
   // }, [dispatch])
   render() {
     return (
-      <View style={styles.main}>
-        <Image source={icons.logo}></Image>
-      </View>
+      <SafeAreaView style={{ flex: 1 }}>
+        <View style={styles.main}>
+          <Image source={icons.logo}></Image>
+        </View>
+      </SafeAreaView>
     );
   }
 }

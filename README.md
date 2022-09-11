@@ -8,7 +8,7 @@ Designed in [Figma - UI](https://www.figma.com/file/C94iBK6UXIVx7ZSs2nZqib/E-Com
 
 ## LIB/FRAMEWORKS
 
-Redux, 
+React Native, Redux, 
 
 ## PACKAGES
 

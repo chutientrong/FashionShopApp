@@ -8,8 +8,8 @@
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#40BFFF"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -18,7 +18,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.trongct.FashionShopApp"
     },
     "android": {
       "adaptiveIcon": {

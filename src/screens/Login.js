@@ -144,8 +144,8 @@ const Login = ({ navigation }) => {
                     color: COLORS.white,
                     ...FONTS.btnFont,
                   }}
-                  onPress={handleLogin}
-                  // onPress={()=>navigation.navigate("Main")} // FOR RELEASE
+                  // onPress={handleLogin}
+                  onPress={()=>navigation.navigate("Main")} // FOR RELEASE
                 />
               </View>
               <View

@@ -79,7 +79,7 @@ const SearchProduct = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1,backgroundColor:COLORS.white }}>
       <View
         style={{
           flex: 1,

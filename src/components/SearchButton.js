@@ -19,8 +19,8 @@ const SearchButton = ({ data }) => {
         alignItems: "center",
         marginVertical: 4,
         marginRight: 8,
-        padding: 16,
-
+        paddingVertical: 8,
+        paddingHorizontal: 16,
         borderRadius: 5,
         borderColor: COLORS.neutralLight,
         borderWidth:  1,

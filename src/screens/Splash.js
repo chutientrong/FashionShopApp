@@ -10,7 +10,7 @@ class Splash extends Component {
     return new Promise((resolve) =>
       setTimeout(() => {
         resolve("result");
-      }, 1500)
+      }, 1000)
     );
   };
 

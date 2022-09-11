@@ -6,9 +6,9 @@ DESIGN FASHION SHOP MOBILE APPLICATION IN 10 DAYS WITH 66 SCREENS
 
 Designed in [Figma - UI](https://www.figma.com/file/C94iBK6UXIVx7ZSs2nZqib/E-Commerce-App-Kit-(Community)?node-id=1%3A84)
 
-## LIB/FRAMEWORKS
+## LIBRARIES/FRAMEWORKS
 
-React Native, Redux, 
+React Native, Expo, Redux, 
 
 ## PACKAGES
 

@@ -40,7 +40,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com)
 
 1. Clone this repository
   ```bash
-  $ git clone https://github.com/chutientrong/FashionShopApp
+  $ git clone https://github.com/chutientrong/FashionShopApp.git
   ```
 2. Go into the repository
   ```bash
@@ -50,7 +50,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com)
   ```bash
   $ npm install
   ```
-> Or you can install through yarn. 
+> Or you can install through yarn (i'm using). 
   - Before you need install yarn
     ```bash
     npm install --g yarn

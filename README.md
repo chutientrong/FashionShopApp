@@ -38,20 +38,39 @@ Or choose this links blow
 ## How To Use
 To clone and run this application, you'll need [Git](https://git-scm.com) 
 
+1. Clone this repository
+  ```bash
+  $ git clone https://github.com/chutientrong/FashionShopApp
+  ```
+2. Go into the repository
+  ```bash
+  $ cd FashionShopApp
+  ```
+3. Intall dependencies through `npm`
+  ```bash
+  $ npm install
+  ```
+> Or you can install through yarn. 
+  - Before you need install yarn
+    ```bash
+    npm install --g yarn
+    ```
+  - then 
+    ```bash
+    $ yarn
+    ```
+4. Run the app
+  ```bash
+  $ npm start
+  ```
+## Build App Release
+### Install EAS
+See doccument in [EAS Setup](https://docs.expo.dev/build/setup/)
+### Build 
+Type in terminal
 ```bash
-# Clone this repository
-$ git clone https://github.com/chutientrong/FashionShopApp
-
-# Go into the repository
-$ cd FashionShopApp
-
-# Install dependencies
-$ npm install
-
-# Run the app
-$ npm start
+eas build -p android --profile release 
 ```
-
 
 ## PACKAGES USED
 

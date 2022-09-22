@@ -10,6 +10,9 @@ Designed in [Figma - UI](https://www.figma.com/file/C94iBK6UXIVx7ZSs2nZqib/E-Com
 
 React Native, Expo, Redux, 
 
+## APP
+[Android](BuildRelease/FASHIONSHOP_ANDROID.apk)
+<br>[IOS Simulator](BuildRelease/FASHIONSHOP_IOS.tar.gz)</br>
 
 ## Setup Environment
 ### 1. NodeJs
@@ -32,8 +35,8 @@ Or choose this links blow
   - [mac](https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_osx-x64_bin.tar.gz), 
   - [linux](https://download.java.net/java/GA/jdk12/33/GPL/openjdk-12_linux-x64_bin.tar.gz)
 * Setup 
-> - It's too many steps, so i can't write here
-> - Follow tab named React Native CLI Quickstart in [Link] (https://reactnative.dev/docs/environment-setup) to Setting up
+> It's too many steps, so i can't write here
+> <br>Follow tab named React Native CLI Quickstart in [Link] (https://reactnative.dev/docs/environment-setup) to Setting up</br>
 
 ## How To Use
 To clone and run this application, you'll need [Git](https://git-scm.com) 
@@ -51,7 +54,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com)
   $ npm install
   ```
 > Or you can install through yarn (i'm using). 
-  - Before you need install yarn
+  - Before you need install yarn</br>
     ```bash
     npm install --g yarn
     ```

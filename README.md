@@ -27,7 +27,7 @@ npm install -g npm
 > **Note**
 > Have 2 options to setup (requiment option b, but i'am using option a)
 #### a. Expo
-Download [Expo Go](https://expo.dev/client) in your phone or emulator ([Bluestack](https://www.bluestacks.com/vi/index.html), [LDPPlayer](https://vn.ldplayer.net/) (i'm using))
+Download [Expo Go](https://expo.dev/client) and install in your phone or emulator ([Bluestack](https://www.bluestacks.com/vi/index.html), [LDPPlayer](https://vn.ldplayer.net/) (i'm using))
 #### b. React Native CLI
 * Install [openjdk11](https://jdk.java.net/archive/) - roll down to version 11 and choose option for your type OS
 Or choose this links blow 

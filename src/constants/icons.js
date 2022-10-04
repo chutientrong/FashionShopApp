@@ -29,6 +29,7 @@ const bank = require('../assets/icons/Bank.png');
 const creditcard = require('../assets/icons/CreditCard.png');
 const paypal = require('../assets/icons/Paypal.png');
 const success = require('../assets/icons/SuccessIcon.png');
+
 export default {
     logo,
     logo2,

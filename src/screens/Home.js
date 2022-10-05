@@ -30,8 +30,8 @@ const Home = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ flex: 1, backgroundColor: COLORS.white }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
+      <View style={{ flex: 1}}>
         <Header
           children={
             <View

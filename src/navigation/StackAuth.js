@@ -2,7 +2,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from "../screens/Login";
 import Register from "../screens/Register";
 import ForgotPassword from "../screens/ForgotPassword";
-import StackMain from "./StackMain";
+// import StackMain from "./StackMain";
 const Stack = createStackNavigator();
 
 export default function StackAuth() {
@@ -12,7 +12,7 @@ export default function StackAuth() {
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       {/* To Release */}
-      <Stack.Screen name="Main" component={StackMain} />
+      {/* <Stack.Screen name="Main" component={StackMain} /> */}
     </Stack.Navigator>
   );
 }

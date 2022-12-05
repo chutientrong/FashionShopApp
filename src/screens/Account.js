@@ -167,8 +167,8 @@ const Account = ({ navigation }) => {
             padding: 16,
             height: 56,
           }}
-          // onPress={handleLogout}
-          onPress={() => navigation.navigate("StackAuth")} // TO RELEASE
+          onPress={handleLogout}
+          // onPress={() => navigation.navigate("StackAuth")} // TO RELEASE
         >
           <View style={{ flexDirection: "row", alignSelf: "center" }}>
             <Icon

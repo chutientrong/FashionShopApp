@@ -84,7 +84,7 @@ function isValidCoupon(value, coupon) {
   else return false;
 }
 function validateCoupon(value, setCouponError, coupon) {
-  console.log("isvalid",isValidCoupon(value, coupon))
+  // console.log("isvalid",isValidCoupon(value, coupon))
   if (value == "") {
     setCouponError("");
   } else if (isValidCoupon(value, coupon)) {

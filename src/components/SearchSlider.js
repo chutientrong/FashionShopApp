@@ -19,12 +19,12 @@ const SearchSlider = () => {
   };
   const onValuesChangeFinish = (values) => {
     setSelected(values);
-    console.log(selected[0]);
+    // console.log(selected[0]);
   };
   const onValuesChange = (values) => {
     setSelected(values);
-    console.log(selected[0]);
-    console.log(selected[1]);
+    // console.log(selected[0]);
+    // console.log(selected[1]);
   };
   return (
     <View

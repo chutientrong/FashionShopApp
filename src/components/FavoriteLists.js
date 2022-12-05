@@ -3,7 +3,7 @@ import React from "react";
 import ProductCardBigger from "./ProductCardBigger";
 
 const FavoriteLists = ({ data, navigation }) => {
-  console.log("Favorite = ", data);
+  // console.log("Favorite = ", data);
   const renderItem = ({ item }) => (
     <View>
       <ProductCardBigger

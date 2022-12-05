@@ -171,8 +171,8 @@ const Register = ({ navigation }) => {
                 color: COLORS.white,
                 ...FONTS.btnFont,
               }}
-              // onPress={handleRegister}
-              onPress={()=>navigation.navigate("Main")}
+              onPress={handleRegister}
+              // onPress={()=>navigation.navigate("Main")}
             />
           </View>
 

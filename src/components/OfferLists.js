@@ -3,7 +3,7 @@ import { FlatList, View } from "react-native";
 import ProductCardBigger from "./ProductCardBigger";
 
 const OfferLists = ({ data,navigation }) => {
-  console.log("Offer = ", data);
+  // console.log("Offer = ", data);
   const renderItem = ({ item }) => (
     <ProductCardBigger
       image={item.image}

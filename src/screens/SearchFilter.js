@@ -52,14 +52,14 @@ const SearchFilter = ({ navigation, route }) => {
   };
   const onValuesChangeFinish = (values) => {
     setSelected(values);
-    console.log(selected[0]);
+    // console.log(selected[0]);
   };
   const onValuesChange = (values) => {
     setSelected(values);
     setMinPrice(selected[0]);
     setMaxPrice(selected[1]);
-    console.log(selected[0]);
-    console.log(selected[1]);
+    // console.log(selected[0]);
+    // console.log(selected[1]);
   };
 
   return (

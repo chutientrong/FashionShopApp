@@ -22,7 +22,6 @@ const SearchCategory = ({ navigation,route }) => {
                 style={{
                   justifyContent: "space-between",
                   flexDirection: "row",
-
                   height: 56,
                   padding: 16,
                 }}

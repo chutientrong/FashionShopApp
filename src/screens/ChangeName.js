@@ -14,8 +14,8 @@ const ChangeName = ({ navigation }) => {
   const [fnameError, setFNameError] = useState("");
   const [lname, setLName] = useState("Gold");
   const [lnameError, setLNameError] = useState("");
-  console.log("fname ", fname);
-  console.log("lname ", lname);
+  // console.log("fname ", fname);
+  // console.log("lname ", lname);
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1, backgroundColor: COLORS.white }}>

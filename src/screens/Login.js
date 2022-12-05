@@ -56,25 +56,21 @@ const Login = ({ navigation }) => {
     <SafeAreaView
       style={{
         flex: 1,
-        //   flexDirection:'column',
-        // flexWrap:'wrap',
+
         backgroundColor: COLORS.white,
       }}
     >
       <ScrollView>
-        <AuthLayout title="Wellcome to Lafyuu" subTitle="Sign in to continue">
+        <AuthLayout title="Wellcome to Ecommerxe" subTitle="Sign in to continue">
           <View
             style={{
               flex: 1,
-              // marginTop: SIZES.sm,
             }}
           >
             <View
               style={{
                 flex: 1,
-                backgroundColor: "#fff",
-                // alignItems: "center",
-                // justifyContent: "flex-start",
+
               }}
             >
               <View
@@ -144,8 +140,8 @@ const Login = ({ navigation }) => {
                     color: COLORS.white,
                     ...FONTS.btnFont,
                   }}
-                  // onPress={handleLogin}
-                  onPress={()=>navigation.navigate("Main")} // FOR RELEASE
+                  onPress={handleLogin}
+                  // onPress={()=>navigation.navigate("Main")} // FOR RELEASE
                 />
               </View>
               <View

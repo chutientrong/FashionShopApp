@@ -56,21 +56,21 @@ export const login = (values) => async (dispatch) => {
       dispatch(loginSuccess(email));
       console.log("The data....", res.data);
     });
-  } catch (error) {
-    if (error.response) {
+  } catch (err) {
+    if (err.response) {
       // There is an error response from the server
       // You can anticipate error.response.data here
       const error = err.response.data;
       dispatch(addError(error.message));
       dispatch(setLoading(true));
       dispatch(loginFailed('Invalid email or password'));
-    } else if (error.request) {
+    } else if (err.request) {
       // The request was made but no response was received
       // Error details are stored in error.reqeust
-      console.log("Error request",error.request);
+      console.log("Error request",err.request);
     } else {
       // Some other errors
-      console.log("Error", error.message);
+      console.log("Error", err.message);
     }
     // let stus = error.response.status;
     // if (stus === 400 || stus === 404) {
@@ -115,19 +115,19 @@ export const logout = async (dispatch) => {
       // console.log("The data....", res.data);
       console.log("The data....", res.data);
     });
-  } catch (error) {
-    if (error.response) {
+  } catch (err) {
+    if (err.response) {
       // There is an error response from the server
       // You can anticipate error.response.data here
       const error = err.response.data;
       dispatch(addError(error.message));
-    } else if (error.request) {
+    } else if (err.request) {
       // The request was made but no response was received
       // Error details are stored in error.reqeust
-      console.log("Error request",error.request);
+      console.log("Error request",err.request);
     } else {
       // Some other errors
-      console.log("Error", error.message);
+      console.log("Error", err.message);
     }
     // let stus = error.response.status;
     // if (stus === 400 || stus === 404) {
@@ -143,12 +143,21 @@ const logoutSuccess = () => ({
 });
 
 export const registerUser = (values, navigation) => async (dispatch) => {
-  dispatch({
-    type: CREATE_USER_REQUEST,
-  });
+  // dispatch({
+  //   type: CREATE_USER_REQUEST,
+  // });
   let {username, email, password} = values;
+  console.log(SIGNUP)
   try {
+    
+  //   const ress = await fetch(SIGNUP,{
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     body: JSON.stringify({username,email,password})
+  // })
+    // console.log('resss',ress)
     await axios.post(SIGNUP, {username,email,password}).then((res) => {
+      console.log(res)
       dispatch({ type: CREATE_USER_SUCCESS, payload: res.data });
       console.log('Saving Token....');
       // AsyncStorage.setItem('@Token', res.data.token);
@@ -157,23 +166,23 @@ export const registerUser = (values, navigation) => async (dispatch) => {
       saveDataToStorage(res.data.token, res.data.user);
       // dispatch(loginSuccess(email));
       console.log("Congrats......... ", res.data);
-      // navigation.navigate('SignIn');
+      navigation.navigate('Login');
     });
-  } catch (error) {
-    if (error.response) {
+  } catch (err) {
+    if (err.response) {
       // There is an error response from the server
       // You can anticipate error.response.data here
       const error = err.response.data;
-      console.log("Error when register", error);
-      Toast;
+      console.log("Error when register", err);
+      
       dispatch({ type: CREATE_USER_FAILED, payload: error });
-    } else if (error.request) {
+    } else if (err.request) {
       // The request was made but no response was received
       // Error details are stored in error.reqeust
-      console.log("Error request",error.request);
+      console.log("Error request",err.request);
     } else {
       // Some other errors
-      console.log("Error", error.message);
+      console.log("Error", err.message);
     }
     // let stus = error.response.status;
     // if (stus === 400 || stus === 404) {

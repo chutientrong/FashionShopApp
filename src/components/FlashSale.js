@@ -4,7 +4,7 @@ import ProductCard from './ProductCard'
 import { COLORS } from '../constants';
 
 const FlashSale = ({ data,onPress,navigation }) => {
-  console.log("Flash = ",data);
+  // console.log("Flash = ",data);
   return (
     <View style={{height:244,marginTop:12}}>
       <ScrollView

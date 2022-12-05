@@ -3,7 +3,7 @@ import React from "react";
 import { COLORS, FONTS } from "../constants";
 
 const ProductCard = (props) => {
-console.log("data =",props)
+// console.log("data =",props)
   return (
     <TouchableOpacity
       style={{

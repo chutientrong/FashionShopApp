@@ -12,7 +12,7 @@ import ProductCardBigger from "./ProductCardBigger";
 import { COLORS, FONTS, WIDTH } from "../constants";
 
 const SearchResult =({ data ,navigation}) => {
-  console.log("Search Result = ", data);
+  // console.log("Search Result = ", data);
   const renderItem = ({ item }) => (
     <ProductCardBigger
       image={item.image}

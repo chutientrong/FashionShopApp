@@ -4,7 +4,7 @@ import ProductCard from './ProductCard'
 import { COLORS } from '../constants';
 
 const MegaSale = ({ data,navigation }) => {
-  console.log("Mega = ",data);
+  // console.log("Mega = ",data);
   return (
     <View style={{height:244,marginTop:12}}>
       <ScrollView

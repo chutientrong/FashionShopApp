@@ -12,7 +12,7 @@ import ProductCardBigger from "./ProductCardBigger";
 import { COLORS, FONTS, WIDTH } from "../constants";
 
 const Recommend = ({ data ,navigation}) => {
-  console.log("Recommend = ", data);
+  // console.log("Recommend = ", data);
   const renderItem = ({ item }) => (
     <ProductCardBigger
       image={item.image}

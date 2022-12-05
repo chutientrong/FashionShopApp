@@ -10,35 +10,36 @@ import { CUSTOMFONTS } from "./src/constants";
 import { RootStack } from "./src/navigation/RootStack";
 
 const App = () => {
-  const [fontsLoaded] = Font.useFonts(CUSTOMFONTS);
+	const [fontsLoaded] = Font.useFonts(CUSTOMFONTS);
 
-  useEffect(() => {
-    async function prepare() {
-      await SplashScreen.preventAutoHideAsync();
-    }
+	useEffect(() => {
+		async function prepare() {
+			await SplashScreen.preventAutoHideAsync();
+		}
 
-    prepare();
-  }, []);
+		prepare();
+	}, []);
 
-  const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded) {
-      await SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
+	const onLayoutRootView = useCallback(async () => {
+		if (fontsLoaded) {
+			await SplashScreen.hideAsync();
+		}
+	}, [fontsLoaded]);
 
-  if (!fontsLoaded) {
-    return null;
-  }
+	if (!fontsLoaded) {
+		return null;
+	}
 
-  return (
-    <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <RootStack></RootStack>
-        </PersistGate>
-      </Provider>
-    </View>
-  );
+	return (
+		<View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+			<Provider store={store}>
+				<PersistGate loading={null} persistor={persistor}>
+					<RootStack></RootStack>
+				</PersistGate>
+			</Provider>
+		</View>
+	);
 };
 
 export default App;
+

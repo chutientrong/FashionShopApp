@@ -53,7 +53,7 @@ const Calendar = ({
     return calendar;
   }
   const calendar = getCalendarDates(year, month);
-console.log(date)
+// console.log(date)
   return (
     <>
       <View style={{ height: 350 }}>

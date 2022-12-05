@@ -3,7 +3,7 @@ import React from "react";
 import { COLORS, FONTS } from "../constants";
 
 const ExploreCard = ({ image, title, onPress }) => {
-  console.log("item explore =", { image, title });
+  // console.log("item explore =", { image, title });
   return (
     <TouchableOpacity
       style={{

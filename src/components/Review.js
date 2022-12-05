@@ -4,7 +4,7 @@ import { COLORS, FONTS } from "../constants";
 import StarRating from "./StarRating";
 
 const Review = ({ data }) => {
-    console.log("reviewdata= ",data)
+    // console.log("reviewdata= ",data)
   return (
     <View style={{ margin: 16 }}>
       <View style={{ flexDerection: "row" }}>

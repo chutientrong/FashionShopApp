@@ -21,7 +21,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const ProductDetails = ({ route, navigation }) => {
   const data = route.params;
 
-  console.log("data ", data);
+  // console.log("data ", data);
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1, backgroundColor: COLORS.white }}>

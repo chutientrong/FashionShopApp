@@ -4,7 +4,6 @@ import StackAuth from "./StackAuth";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import StackMain from "./StackMain";
 
-
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   const isAuth = useSelector((state) => state.auth.token);
